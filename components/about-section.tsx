@@ -1,7 +1,7 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { Code2, Cpu, Telescope, Brain, Globe, Award, Users, BookOpen, Lightbulb } from "lucide-react"
+import { Code2, Cpu, Telescope, Brain, Globe, Award, Users, BookOpen, Lightbulb, Github } from "lucide-react"
 
 const skills = [
   { name: "Python Programming", level: 90, category: "Programming" },
@@ -136,6 +136,77 @@ export function AboutSection() {
                 </Card>
               ))}
             </div>
+          </div>
+        </div>
+        
+        {/* Community Activities Section */}
+        <div className="mb-12 lg:mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-xl lg:text-2xl font-semibold text-blue-300 inline-flex items-center gap-2">
+              <span className="text-yellow-400">🌟</span> My Major Community Activities
+            </h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            <Card className="p-4 lg:p-5 hover:shadow-lg transition-all duration-300 hover:scale-102 border-indigo-500/20 hover:border-indigo-400/30">
+              <CardContent className="p-0">
+                <h4 className="font-medium text-indigo-300 mb-2 text-base lg:text-lg flex items-center gap-2">
+                  <Telescope className="h-4 w-4 lg:h-5 lg:w-5" />
+                  Astronomical & Robotics Outreach
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Supported practical science learning by leading astronomy outreach events (including Nepal Astronomical Society initiatives) and hands-on robotics workshops, inspiring younger students to explore STEM.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="p-4 lg:p-5 hover:shadow-lg transition-all duration-300 hover:scale-102 border-blue-500/20 hover:border-blue-400/30">
+              <CardContent className="p-0">
+                <h4 className="font-medium text-blue-300 mb-2 text-base lg:text-lg flex items-center gap-2">
+                  <Globe className="h-4 w-4 lg:h-5 lg:w-5" />
+                  AWS Student Community Day 2024
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Participated actively, gaining exposure to global-scale cloud community practices, which I later brought back to my peers to strengthen local cloud-focused initiatives.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="p-4 lg:p-5 hover:shadow-lg transition-all duration-300 hover:scale-102 border-purple-500/20 hover:border-purple-400/30">
+              <CardContent className="p-0">
+                <h4 className="font-medium text-purple-300 mb-2 text-base lg:text-lg flex items-center gap-2">
+                  <Github className="h-4 w-4 lg:h-5 lg:w-5" />
+                  GitHub Fielder 2024
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Selected to participate in GitHub Field Day 2024, connecting with international community leaders and learning best practices in open-source community building and sustainability.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="p-4 lg:p-5 hover:shadow-lg transition-all duration-300 hover:scale-102 border-green-500/20 hover:border-green-400/30">
+              <CardContent className="p-0">
+                <h4 className="font-medium text-green-300 mb-2 text-base lg:text-lg flex items-center gap-2">
+                  <Code2 className="h-4 w-4 lg:h-5 lg:w-5" />
+                  CS50 AI Nepal
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Serving as PR & Outreach Lead, where I helped the community thrive by expanding participation, strengthening visibility, and connecting with learners nationwide, building a culture of peer-to-peer learning in AI and computer science.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="p-4 lg:p-5 hover:shadow-lg transition-all duration-300 hover:scale-102 border-cyan-500/20 hover:border-cyan-400/30 md:col-span-2 lg:col-span-1">
+              <CardContent className="p-0">
+                <h4 className="font-medium text-cyan-300 mb-2 text-base lg:text-lg flex items-center gap-2">
+                  <BookOpen className="h-4 w-4 lg:h-5 lg:w-5" />
+                  ICTRAI Scientific Research Community
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Contributed to the growth of this research-driven initiative, which emerged from ICRTAI 2025. It now acts as a collaborative hub for young researchers, fostering a culture of scientific exploration and publication in Nepal.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
 
