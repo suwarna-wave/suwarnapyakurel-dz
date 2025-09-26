@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Download, ExternalLink, Facebook, Instagram } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { useEffect, useState } from "react"
+import { getAssetPath } from "@/lib/utils"
 
 export function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -149,7 +150,7 @@ export function HeroSection() {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.open("/Suwarna_Pyakurel_CV.pdf", "_blank")}
+                onClick={() => window.open(getAssetPath("/Suwarna_Pyakurel_CV.pdf"), "_blank")}
                 className="group w-full sm:w-auto border-blue-500/30 text-blue-300 hover:bg-blue-500/10"
               >
                 <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
@@ -184,7 +185,7 @@ export function HeroSection() {
                 }}
               >
                 <img
-                  src="/professional-headshot-of-young-engineering-student.jpg"
+                  src={getAssetPath("/professional-headshot-of-young-engineering-student.jpg")}
                   alt="Suwarna Pyakurel"
                   className="w-full h-full object-cover"
                 />

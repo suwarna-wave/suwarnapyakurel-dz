@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { ExternalLink, Github, Calendar, MapPin, Cpu, Database, TrendingUp } from "lucide-react"
+import { getAssetPath } from "@/lib/utils"
 
 const projects = [
   {
@@ -177,7 +178,7 @@ export function ProjectsSection() {
               <CardHeader className="p-0">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image ? getAssetPath(project.image) : getAssetPath("/placeholder.svg")}
                     alt={project.title}
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />

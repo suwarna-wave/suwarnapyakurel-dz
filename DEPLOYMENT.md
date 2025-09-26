@@ -1,18 +1,58 @@
 # GitHub Pages Deployment Guide
 
-## Setup Instructions
+## Automatic Deployment Setup (Recommended)
 
-1. **Push to GitHub**: Push your code to a GitHub repository
+This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
+
+1. **Push to GitHub**: Push your code to the GitHub repository
+   ```bash
+   git add .
+   git commit -m "Ready for GitHub Pages deployment"
+   git push origin main
+   ```
+
 2. **Enable GitHub Pages**: 
-   - Go to your repository settings
+   - Go to your repository settings on GitHub
    - Navigate to "Pages" section
-   - Select "GitHub Actions" as the source
-3. **Update Repository Name**: 
-   - Edit `next.config.mjs` 
-   - Replace `your-repo-name` with your actual repository name
-4. **Push Changes**: The workflow will automatically deploy your site
+   - Under "Build and deployment", select "GitHub Actions" as the source
+   - The workflow file is already set up in `.github/workflows/deploy.yml`
 
-## Important Notes
+3. **Wait for Deployment**: 
+   - GitHub Actions will automatically build and deploy your site
+   - You can monitor the progress in the "Actions" tab of your repository
+
+## What's Included in the Setup
+
+- **GitHub Actions Workflow**: Automatically builds and deploys on every push to main
+- **Next.js Configuration**: Already set up for static export with:
+  - `output: 'export'`
+  - `trailingSlash: true`
+  - `basePath` and `assetPrefix` configured for `/suwarnapyakurel-dz`
+  - `images: { unoptimized: true }` for static image handling
+- **.nojekyll**: Added to prevent GitHub Pages from processing with Jekyll
+
+## After Deployment
+
+- Your site will be available at: `https://suwarna-wave.github.io/suwarnapyakurel-dz`
+- The deployment happens automatically on every push to the main branch
+
+## Troubleshooting
+
+- **Missing Images**: If images don't load, check network paths and make sure they're relative to the basePath
+- **CSS Not Loading**: Check browser console for path issues and verify basePath is correct
+- **404 Errors**: Make sure GitHub Pages is properly configured and deployment completed successfully
+- **Navigation Issues**: Ensure all links are relative and compatible with the basePath
+
+## Manual Testing Before Deployment
+
+You can test the static export locally:
+
+```bash
+npm run build
+npx serve out
+```
+
+Then visit `http://localhost:3000` to see how the site will look when deployed.
 
 - Your site will be available at: `https://yourusername.github.io/your-repo-name`
 - The deployment happens automatically on every push to the main branch
