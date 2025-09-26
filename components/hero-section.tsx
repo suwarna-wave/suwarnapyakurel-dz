@@ -191,7 +191,7 @@ export function HeroSection() {
                 }}
               >
                 <img
-                  src={getAssetPath("/professional-headshot-of-young-engineering-student.jpg")}
+                  src={getAssetPath("/professional-headshot-of-young-engineering-student.png")}
                   alt="Suwarna Pyakurel"
                   className="w-full h-full object-cover"
                 />
