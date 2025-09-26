@@ -2,8 +2,9 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/suwarnapyakurel-dz' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/suwarnapyakurel-dz/' : '',
+  // For custom domain, we don't need basePath and assetPrefix
+  basePath: '',
+  assetPrefix: '',
   eslint: {
     ignoreDuringBuilds: true,
   },

@@ -47,6 +47,8 @@ jobs:
         run: pnpm install
       - name: Build with Next.js
         run: pnpm build
+      - name: Copy CNAME to out directory
+        run: cp ./public/CNAME ./out/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
