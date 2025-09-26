@@ -6,8 +6,8 @@ import { Code2, Cpu, Telescope, Brain, Globe, Award, Users, BookOpen, Lightbulb 
 const skills = [
   { name: "Python Programming", level: 90, category: "Programming" },
   { name: "C & C++", level: 85, category: "Programming" },
-  { name: "Web Development", level: 80, category: "Programming" },
-  { name: "AI & Machine Learning", level: 75, category: "Technology" },
+  { name: "Web Development", level: 65, category: "Programming" },
+  { name: "AI & Machine Learning", level: 45, category: "Technology" },
   { name: "Robotics & IoT", level: 85, category: "Technology" },
   { name: "Linux Systems", level: 80, category: "Technology" },
   { name: "Public Speaking", level: 90, category: "Soft Skills" },
@@ -25,7 +25,7 @@ const achievements = [
   },
   {
     icon: Lightbulb,
-    title: "Best Idea - X-hack 2.0",
+    title: "Best Idea - X-hack 3.0",
     description: "Won the Best Idea title at the largest hardware hackathon of Nepal",
     year: "2024",
   },
@@ -169,7 +169,34 @@ export function AboutSection() {
         {/* Achievements Section */}
         <div>
           <h3 className="text-xl lg:text-2xl font-semibold mb-6 lg:mb-8 text-center">Key Achievements</h3>
-          <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
+          
+          {/* Dynamic Achievements from the achievements array */}
+          <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 mb-8">
+            {achievements.map((achievement, index) => (
+              <Card 
+                key={index} 
+                className="p-4 lg:p-6 glass-card border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 hover:scale-105"
+              >
+                <CardContent className="p-0">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 bg-blue-500/20 rounded-lg">
+                      <achievement.icon className="w-5 h-5 text-blue-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-blue-300">{achievement.title}</h4>
+                      <span className="text-xs text-muted-foreground">{achievement.year}</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {achievement.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          {/* Additional static achievements */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             <Card className="p-4 lg:p-6 glass-card border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <CardContent className="p-0">
                 <div className="flex items-center gap-3 mb-3">
