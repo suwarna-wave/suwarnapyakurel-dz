@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   keywords: ["Suwarna Pyakurel", "Engineering Student", "AI", "Robotics", "Astronomy", "Nepal", "Portfolio"],
   authors: [{ name: "Suwarna Pyakurel" }],
   creator: "Suwarna Pyakurel",
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    apple: { url: '/apple-touch-icon.png' },
+  },
   openGraph: {
     title: "Suwarna Pyakurel - Engineering Student & Tech Enthusiast",
     description: "Portfolio showcasing projects in AI, Robotics, and Astronomy",
