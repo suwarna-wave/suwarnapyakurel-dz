@@ -10,7 +10,7 @@ export function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0)
 
-  const roles = ["Undergraduate Engineer", "Research Enthusiast", "Robotics Developer", "Outreach and PR Strategy"]
+  const roles = ["Undergraduate Engineer", "Research Enthusiast", "Robotics Developer", "Outreach and PR Strategist"]
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {

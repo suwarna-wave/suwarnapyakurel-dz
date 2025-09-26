@@ -143,7 +143,7 @@ export function AboutSection() {
         <div className="mb-12 lg:mb-16">
           <div className="text-center mb-8">
             <h3 className="text-xl lg:text-2xl font-semibold text-blue-300 inline-flex items-center gap-2">
-              <span className="text-yellow-400">🌟</span> My Major Community Activities
+              <span className="text-yellow-400">🌟</span> Major Community Activities
             </h3>
           </div>
           
