@@ -18,6 +18,8 @@ export function Navigation() {
   const [activeSection, setActiveSection] = useState("about")
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    
     const handleScroll = () => {
       const sections = navItems.map((item) => item.href.slice(1))
       const scrollPosition = window.scrollY + 100

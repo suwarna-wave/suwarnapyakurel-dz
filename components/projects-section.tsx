@@ -291,7 +291,11 @@ export function ProjectsSection() {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.open("https://github.com/suwarna-wave", "_blank")}
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    window.open("https://github.com/suwarna-wave", "_blank")
+                  }
+                }}
                 className="group hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 magnetic"
               >
                 <Github className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />

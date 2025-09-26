@@ -17,8 +17,10 @@ export function HeroSection() {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
 
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
+    if (typeof window !== "undefined") {
+      window.addEventListener("mousemove", handleMouseMove)
+      return () => window.removeEventListener("mousemove", handleMouseMove)
+    }
   }, [])
 
   useEffect(() => {
@@ -81,8 +83,8 @@ export function HeroSection() {
         <div
           className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000 transition-all duration-1000"
           style={{
-            right: `${(window.innerWidth - mousePosition.x) * 0.01}px`,
-            bottom: `${(window.innerHeight - mousePosition.y) * 0.01}px`,
+            right: typeof window !== "undefined" ? `${(window.innerWidth - mousePosition.x) * 0.01}px` : "0px",
+            bottom: typeof window !== "undefined" ? `${(window.innerHeight - mousePosition.y) * 0.01}px` : "0px",
           }}
         ></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl animate-gradient"></div>
@@ -150,7 +152,11 @@ export function HeroSection() {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.open(getAssetPath("/Suwarna_Pyakurel_CV.pdf"), "_blank")}
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    window.open(getAssetPath("/Suwarna_Pyakurel_CV.pdf"), "_blank")
+                  }
+                }}
                 className="group w-full sm:w-auto border-blue-500/30 text-blue-300 hover:bg-blue-500/10"
               >
                 <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />

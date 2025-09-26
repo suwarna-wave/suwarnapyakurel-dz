@@ -37,6 +37,8 @@ export function BottomNavigation() {
   const [showScrollUp, setShowScrollUp] = useState(false)
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    
     const handleScroll = () => {
       const sections = ["hero", "about", "experience", "projects", "contact"]
       const scrollPosition = window.scrollY + 200
@@ -87,7 +89,9 @@ export function BottomNavigation() {
 
   const scrollToTop = () => {
     console.log("[v0] Scrolling to top")
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
   }
 
   const downloadCV = () => {

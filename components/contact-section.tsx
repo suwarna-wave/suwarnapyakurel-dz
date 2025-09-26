@@ -98,7 +98,9 @@ export function ContactSection() {
       const mailtoLink = `mailto:suwarnapyakurel5@gmail.com?subject=${subject}&body=${body}`
 
       // Open email client
-      window.location.href = mailtoLink
+      if (typeof window !== "undefined") {
+        window.location.href = mailtoLink
+      }
 
       setIsSubmitting(false)
       setIsSubmitted(true)
@@ -322,7 +324,11 @@ export function ContactSection() {
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 lg:gap-4">
             <Button
               variant="outline"
-              onClick={() => window.open("mailto:suwarnapyakurel5@gmail.com", "_blank")}
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.open("mailto:suwarnapyakurel5@gmail.com", "_blank")
+                }
+              }}
               className="group hover:scale-105 transition-all duration-300"
             >
               <Mail className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
@@ -330,7 +336,11 @@ export function ContactSection() {
             </Button>
             <Button
               variant="outline"
-              onClick={() => window.open("https://linkedin.com/in/suwarnapyakurel", "_blank")}
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.open("https://linkedin.com/in/suwarnapyakurel", "_blank")
+                }
+              }}
               className="group hover:scale-105 transition-all duration-300"
             >
               <Linkedin className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
@@ -338,7 +348,11 @@ export function ContactSection() {
             </Button>
             <Button
               variant="outline"
-              onClick={() => window.open("tel:+9779840036060", "_blank")}
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.open("tel:+9779840036060", "_blank")
+                }
+              }}
               className="group hover:scale-105 transition-all duration-300"
             >
               <Phone className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
