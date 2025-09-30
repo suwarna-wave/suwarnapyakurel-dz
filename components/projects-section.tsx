@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { ExternalLink, Github, Calendar, MapPin, Cpu, Database, TrendingUp } from "lucide-react"
 import { getAssetPath } from "@/lib/utils"
+import { link } from "fs"
 
 const projects = [
   {
@@ -28,6 +29,10 @@ const projects = [
     color: "text-green-500",
     bgColor: "bg-green-500/10",
     image: "/smart-agriculture-iot-system-with-sensors.jpg",
+    links: {
+      github: "https://github.com/suwarna-wave/IOT-Based-Agriculture-System",
+      documentation: "https://github.com/suwarna-wave/IOT-Based-Agriculture-System"
+    }
   },
   {
     title: "Travelling Salesman Problem Visualization",
@@ -50,6 +55,10 @@ const projects = [
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
     image: "/traveling-salesman-problem-visualization-graph.jpg",
+    links: {
+      github: "https://github.com/suwarna-wave/DSA-lab/blob/main/Projects/TSP.py",
+      documentation: "https://github.com/suwarna-wave/DSA-lab"
+    }
   },
   {
     title: "Study Tracker",
