@@ -1,177 +1,93 @@
 "use client"
 
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download, ExternalLink, Facebook, Instagram } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { useEffect, useState } from "react"
+import { Github, Linkedin, Mail, Download, ArrowRight, MapPin, Sparkles } from "lucide-react"
 import { getAssetPath } from "@/lib/utils"
 
+const socialLinks = [
+  { name: "GitHub", href: "https://github.com/suwarna-wave", icon: Github },
+  { name: "LinkedIn", href: "https://linkedin.com/in/suwarnapyakurel", icon: Linkedin },
+  { name: "Email", href: "mailto:suwarnapyakurel5@gmail.com", icon: Mail },
+]
+
+const focusAreas = [
+  "Medical AI",
+  "Signal Processing",
+  "Machine Learning",
+  "Predictive Maintenance",
+]
+
+const stats = [
+  { value: "5+", label: "technical workshops and events organized" },
+  { value: "400+", label: "students mentored" },
+  { value: "ML", label: "current work and research direction" },
+]
+
 export function HeroSection() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0)
-
-  const roles = ["Undergraduate Engineer", "Research Enthusiast", "Robotics Developer", "Outreach and PR Strategist"]
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-
-    if (typeof window !== "undefined") {
-      window.addEventListener("mousemove", handleMouseMove)
-      return () => window.removeEventListener("mousemove", handleMouseMove)
-    }
-  }, [])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRoleIndex((prev) => (prev + 1) % roles.length)
-    }, 3000) // Change every 3 seconds
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const socialLinks = [
-    {
-      name: "GitHub",
-      href: "https://github.com/suwarna-wave",
-      icon: Github,
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/in/suwarnapyakurel",
-      icon: Linkedin,
-    },
-    {
-      name: "Facebook",
-      href: "https://www.facebook.com/pyakurel.suwarna",
-      icon: Facebook,
-    },
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/pyakurel.suwarna/",
-      icon: Instagram,
-    },
-    {
-      name: "Email",
-      href: "mailto:suwarnapyakurel5@gmail.com",
-      icon: Mail,
-    },
-  ]
-
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
-    <section
-      id="hero"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden"
-      style={{ cursor: "default" }}
-    >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse transition-all duration-1000"
-          style={{
-            left: `${mousePosition.x * 0.02}px`,
-            top: `${mousePosition.y * 0.02}px`,
-          }}
-        ></div>
-        <div
-          className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000 transition-all duration-1000"
-          style={{
-            right: typeof window !== "undefined" ? `${(window.innerWidth - mousePosition.x) * 0.01}px` : "0px",
-            bottom: typeof window !== "undefined" ? `${(window.innerHeight - mousePosition.y) * 0.01}px` : "0px",
-          }}
-        ></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl animate-gradient"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
-          {/* Left Content */}
-          <div className="space-y-6 lg:space-y-8 animate-fade-in-up text-center lg:text-left">
-            <div className="space-y-3 lg:space-y-4">
-              <p className="text-primary font-medium text-base lg:text-lg animate-fade-in-up">Hello, I'm</p>
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-balance leading-tight">
-                <span className="text-foreground">SUWARNA</span>{" "}
-                <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                  PYAKUREL
-                </span>
-              </h1>
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 lg:gap-3">
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-muted-foreground min-h-[2rem] flex items-center">
-                  <span
-                    key={currentRoleIndex}
-                    className="animate-fade-in-up bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
-                  >
-                    {roles[currentRoleIndex]}
-                  </span>
-                </h2>
-                <Badge variant="secondary" className="text-xs bg-blue-500/20 text-blue-300 border-blue-500/30">
-                  Nepal
-                </Badge>
-              </div>
+    <section id="hero" className="relative flex min-h-screen items-center overflow-hidden pt-16">
+      <div className="absolute inset-x-0 top-0 h-40 border-b border-border/50 bg-primary/[0.03]" />
+      <div className="section-container relative w-full py-20 lg:py-28">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.12fr_0.88fr]">
+          <div className="max-w-3xl">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/70 px-3 py-1 text-xs text-muted-foreground shadow-sm backdrop-blur">
+              <MapPin className="h-3.5 w-3.5 text-primary" />
+              Biratnagar, Nepal
+              <span className="h-1 w-1 rounded-full bg-border" />
+              Scientific ML, Robotics and IoT, Research and Outreach
             </div>
 
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
-              I craft innovative solutions in <span className="text-blue-400 font-medium">AI</span>,{" "}
-              <span className="text-purple-400 font-medium">robotics</span>, and{" "}
-              <span className="text-cyan-400 font-medium">astronomy</span> with a passion for creating impactful
-              technology that bridges the gap between science and society.
+            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              Suwarna Pyakurel
+            </h1>
+
+            <p className="mt-4 text-lg font-medium text-foreground/90 sm:text-xl">
+              Engineering student building practical research systems.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-2">
-              {[
-                { name: "Python", color: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30" },
-                { name: "C++", color: "bg-blue-500/20 text-blue-300 border-blue-500/30" },
-                { name: "AI/ML", color: "bg-purple-500/20 text-purple-300 border-purple-500/30" },
-                { name: "Robotics", color: "bg-green-500/20 text-green-300 border-green-500/30" },
-                { name: "IoT", color: "bg-orange-500/20 text-orange-300 border-orange-500/30" },
-                { name: "Astronomy", color: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30" },
-              ].map((skill) => (
-                <Badge
-                  key={skill.name}
-                  className={`text-xs ${skill.color} hover:scale-105 transition-transform cursor-pointer`}
-                >
-                  {skill.name}
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              I work across medical imaging, vibration signal analysis, and research-oriented machine learning,
+              translating sensor data and models into outcomes that are useful, interpretable, and ready to explain.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {focusAreas.map((area) => (
+                <Badge key={area} variant="secondary" className="border border-border/60 bg-secondary/80 text-xs font-normal">
+                  {area}
                 </Badge>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 items-center">
-              <Button
-                onClick={() => scrollToSection("#projects")}
-                className="group w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 animate-glow"
-              >
-                View My Work
-                <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button onClick={() => scrollToSection("#projects")} className="w-full shadow-sm sm:w-auto">
+                View Projects
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button
                 variant="outline"
-                onClick={() => {
-                  if (typeof window !== "undefined") {
-                    window.open(getAssetPath("/Suwarna_Pyakurel_CV.pdf"), "_blank")
-                  }
-                }}
-                className="group w-full sm:w-auto border-blue-500/30 text-blue-300 hover:bg-blue-500/10"
+                className="w-full bg-card/60 sm:w-auto"
+                onClick={() => window.open(getAssetPath("/Suwarna_Pyakurel_CV.pdf"), "_blank")}
               >
-                <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                <Download className="mr-2 h-4 w-4" />
                 Download CV
               </Button>
             </div>
 
-            <div className="flex items-center justify-center lg:justify-start gap-4">
+            <div className="mt-8 flex items-center gap-2">
               {socialLinks.map((link) => (
                 <Button
                   key={link.name}
                   variant="ghost"
                   size="icon"
                   asChild
-                  className="hover:text-primary transition-all duration-300 hover:scale-110 hover:bg-white/10"
+                  className="text-muted-foreground hover:text-foreground"
                 >
                   <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
                     <link.icon className="h-5 w-5" />
@@ -181,41 +97,36 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Content - Profile Image */}
-          <div className="flex justify-center lg:justify-end order-first lg:order-last">
-            <div className="relative">
-              <div
-                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-blue-500/30 animate-float relative transition-all duration-300 hover:scale-105"
-                style={{
-                  transform: `translate(${mousePosition.x * 0.005}px, ${mousePosition.y * 0.005}px)`,
-                }}
-              >
-                <img
+          <div className="lg:justify-self-end">
+            <div className="polished-card relative overflow-hidden rounded-lg border p-4">
+              <div className="absolute inset-x-0 top-0 h-24 bg-primary/10" />
+              <div className="relative overflow-hidden rounded-lg border border-border/70 bg-muted">
+                <Image
                   src={getAssetPath("/professional-headshot-of-young-engineering-student.png")}
                   alt="Suwarna Pyakurel"
-                  className="w-full h-full object-cover"
+                  width={640}
+                  height={800}
+                  priority
+                  className="aspect-[4/5] w-full object-cover object-center"
                 />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-glow"></div>
               </div>
-
-              <div className="absolute -top-4 -right-4 w-16 h-16 lg:w-20 lg:h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 lg:w-16 lg:h-16 bg-purple-500/20 rounded-full blur-lg animate-pulse delay-1000"></div>
-              <div className="absolute top-1/2 -right-8 w-8 h-8 bg-cyan-500/30 rounded-full blur-md animate-pulse delay-500"></div>
+              <div className="relative mt-4 grid gap-3 sm:grid-cols-3">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="rounded-lg border border-border/70 bg-background/55 p-3">
+                    <p className="text-lg font-semibold text-foreground">{stat.value}</p>
+                    <p className="mt-1 text-xs leading-snug text-muted-foreground">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="relative mt-4 flex items-start gap-3 rounded-lg border border-primary/20 bg-primary/10 p-3">
+                <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Currently working in machine learning, with active focus on explainable medical AI and signal-analysis
+                  workflows.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="flex justify-center mt-12 lg:mt-20">
-          <button
-            onClick={() => scrollToSection("#about")}
-            className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
-          >
-            <span className="text-sm font-medium">Scroll Down</span>
-            <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-current rounded-full mt-2 animate-bounce"></div>
-            </div>
-          </button>
         </div>
       </div>
     </section>

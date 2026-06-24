@@ -1,6 +1,7 @@
 {
-  "name": "Suwarna Pyakurel Portfolio",
-  "short_name": "Suwarna P.",
+  "name": "Suwarna Pyakurel",
+  "short_name": "Suwarna",
+  "description": "ML research and signal analysis portfolio",
   "icons": [
     {
       "src": "/favicon.svg",

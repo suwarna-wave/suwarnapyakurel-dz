@@ -1,4 +1,4 @@
-import { BottomNavigation } from "@/components/bottom-navigation"
+import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { ExperienceSection } from "@/components/experience-section"
@@ -8,14 +8,16 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="relative">
-      <BottomNavigation />
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <ContactSection />
-      <Footer />
-    </main>
+    <>
+      <Header />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </>
   )
 }

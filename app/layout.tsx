@@ -3,35 +3,43 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "suwarna-wave",
+  title: "Suwarna Pyakurel — ML Research & Signal Analysis",
   description:
-    "Portfolio of Suwarna Pyakurel - Undergraduate Engineering Student specializing in Electronics, Communication, and Information Engineering with expertise in AI, Robotics, and Astronomy.",
-  generator: "v0.app",
-  keywords: ["Suwarna Pyakurel", "Engineering Student", "AI", "Robotics", "Astronomy", "Nepal", "Portfolio"],
+    "Portfolio of Suwarna Pyakurel — engineering student and ML researcher focused on medical AI, vibration signal analysis, and research-oriented machine learning.",
+  keywords: [
+    "Suwarna Pyakurel",
+    "Machine Learning",
+    "Medical AI",
+    "Signal Processing",
+    "Engineering",
+    "Nepal",
+    "Research",
+  ],
   authors: [{ name: "Suwarna Pyakurel" }],
   creator: "Suwarna Pyakurel",
   manifest: "/manifest.json",
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    apple: { url: '/apple-touch-icon.png' },
+    apple: { url: "/apple-touch-icon.png" },
   },
   openGraph: {
-    title: "Suwarna Pyakurel - Engineering Student & Tech Enthusiast",
-    description: "Portfolio showcasing projects in AI, Robotics, and Astronomy",
+    title: "Suwarna Pyakurel — ML Research & Signal Analysis",
+    description:
+      "Engineering student building research-oriented ML systems in medical imaging and signal analysis.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Suwarna Pyakurel - Engineering Student & Tech Enthusiast",
-    description: "Portfolio showcasing projects in AI, Robotics, and Astronomy",
+    title: "Suwarna Pyakurel — ML Research & Signal Analysis",
+    description:
+      "Engineering student building research-oriented ML systems in medical imaging and signal analysis.",
   },
 }
 
@@ -43,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        {children}
         <Analytics />
       </body>
     </html>

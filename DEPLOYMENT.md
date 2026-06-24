@@ -1,73 +1,53 @@
-# GitHub Pages Deployment Guide
+# Deployment Guide
 
-## Automatic Deployment Setup (Recommended)
+This portfolio is a Next.js static export deployed to GitHub Pages with a custom domain.
 
-This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
+## Local Run
 
-1. **Push to GitHub**: Push your code to the GitHub repository
-   ```bash
-   git add .
-   git commit -m "Ready for GitHub Pages deployment"
-   git push origin main
-   ```
-
-2. **Enable GitHub Pages**: 
-   - Go to your repository settings on GitHub
-   - Navigate to "Pages" section
-   - Under "Build and deployment", select "GitHub Actions" as the source
-   - The workflow file is already set up in `.github/workflows/deploy.yml`
-
-3. **Wait for Deployment**: 
-   - GitHub Actions will automatically build and deploy your site
-   - You can monitor the progress in the "Actions" tab of your repository
-
-## What's Included in the Setup
-
-- **GitHub Actions Workflow**: Automatically builds and deploys on every push to main
-- **Next.js Configuration**: Already set up for static export with:
-  - `output: 'export'`
-  - `trailingSlash: true`
-  - `basePath` and `assetPrefix` configured for `/suwarnapyakurel-dz`
-  - `images: { unoptimized: true }` for static image handling
-- **.nojekyll**: Added to prevent GitHub Pages from processing with Jekyll
-
-## After Deployment
-
-- Your site will be available at: `https://suwarna-wave.github.io/suwarnapyakurel-dz`
-- The deployment happens automatically on every push to the main branch
-
-## Troubleshooting
-
-- **Missing Images**: If images don't load, check network paths and make sure they're relative to the basePath
-- **CSS Not Loading**: Check browser console for path issues and verify basePath is correct
-- **404 Errors**: Make sure GitHub Pages is properly configured and deployment completed successfully
-- **Navigation Issues**: Ensure all links are relative and compatible with the basePath
-
-## Manual Testing Before Deployment
-
-You can test the static export locally:
+Install Node.js 20 or newer, then run:
 
 ```bash
-npm run build
-npx serve out
+corepack enable
+pnpm install
+pnpm dev
 ```
 
-Then visit `http://localhost:3000` to see how the site will look when deployed.
+Open `http://localhost:3000`.
 
-- Your site will be available at: `https://yourusername.github.io/your-repo-name`
-- The deployment happens automatically on every push to the main branch
-- Make sure to update the `basePath` and `assetPrefix` in `next.config.mjs` with your actual repository name
+## Local Production Check
 
-## Manual Deployment (Alternative)
+Before pushing, run:
 
-If you prefer manual deployment:
-\`\`\`bash
-npm run deploy
-# Then push the 'out' folder to gh-pages branch
-\`\`\`
+```bash
+pnpm build
+pnpm dlx serve out
+```
+
+Open the local URL printed by `serve` and check the pages, links, images, CV download, and contact form.
+
+## GitHub Pages Setup
+
+In the GitHub repository:
+
+1. Go to Settings -> Pages.
+2. Under "Build and deployment", select "GitHub Actions".
+3. Set the custom domain to `suwarnapyakurel.com.np`.
+4. Enable "Enforce HTTPS" when GitHub allows it.
+
+The only deployment workflow should be `.github/workflows/deploy.yml`.
+
+## Deploy
+
+```bash
+git add .
+git commit -m "Prepare portfolio for GitHub Pages deployment"
+git push origin main
+```
+
+The site is published from the generated `out` folder. The `public/CNAME` file is copied into `out` during the workflow so GitHub Pages keeps the custom domain.
 
 ## Troubleshooting
 
-- If images don't load, ensure `unoptimized: true` is set in next.config.mjs
-- If CSS doesn't load, check that the basePath matches your repository name
-- If the site shows 404, ensure GitHub Pages is configured to use GitHub Actions
+- If the site shows an old version, check the Actions tab for the latest `Deploy to GitHub Pages` run.
+- If the custom domain does not work, confirm DNS records point to GitHub Pages and allow DNS propagation time.
+- If assets are missing, make sure `next.config.mjs` still has `output: 'export'`, root `basePath`, and `images.unoptimized`.

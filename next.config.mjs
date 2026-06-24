@@ -2,15 +2,9 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  // For custom domain, we don't need basePath and assetPrefix
+  // Custom-domain deployment: assets are served from the site root.
   basePath: '',
   assetPrefix: '',
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     unoptimized: true,
   },
