@@ -60,21 +60,31 @@ export function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <button
-            onClick={() => scrollToSection("#hero")}
+          <a
+            href="#hero"
+            onClick={(event) => {
+              event.preventDefault()
+              scrollToSection("#hero")
+            }}
             className="group flex items-center gap-2 text-sm font-semibold tracking-tight text-foreground transition-colors hover:text-primary"
+            aria-label="Go to Suwarna Pyakurel homepage section"
           >
             <span className="grid size-7 place-items-center rounded-md border border-border/80 bg-card/70 text-xs text-primary shadow-sm transition-colors group-hover:border-primary/40">
               SP
             </span>
             <span>Suwarna Pyakurel</span>
-          </button>
+          </a>
 
           <nav className="hidden md:flex items-center gap-1 rounded-full border border-border/70 bg-card/45 p-1 shadow-sm backdrop-blur">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                href={item.href}
+                onClick={(event) => {
+                  event.preventDefault()
+                  scrollToSection(item.href)
+                }}
+                aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
                 className={cn(
                   "rounded-full px-3.5 py-1.5 text-sm transition-all",
                   activeSection === item.href.slice(1)
@@ -83,7 +93,7 @@ export function Header() {
                 )}
               >
                 {item.name}
-              </button>
+              </a>
             ))}
           </nav>
 
@@ -102,9 +112,14 @@ export function Header() {
           <nav className="md:hidden pb-4 pt-2">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
-                <button
+                <a
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  href={item.href}
+                  onClick={(event) => {
+                    event.preventDefault()
+                    scrollToSection(item.href)
+                  }}
+                  aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
                   className={cn(
                     "rounded-md px-3 py-2 text-left text-sm transition-colors",
                     activeSection === item.href.slice(1)
@@ -113,7 +128,7 @@ export function Header() {
                   )}
                 >
                   {item.name}
-                </button>
+                </a>
               ))}
             </div>
           </nav>

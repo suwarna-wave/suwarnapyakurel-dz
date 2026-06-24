@@ -5,22 +5,53 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
+const siteUrl = "https://suwarnapyakurel.com.np"
+const siteTitle = "Suwarna Pyakurel - ML Research & Signal Analysis"
+const siteDescription =
+  "Portfolio of Suwarna Pyakurel, an electronics engineering student and ML researcher in Nepal focused on medical AI, vibration signal analysis, IoT, and research-oriented machine learning."
+
 export const metadata: Metadata = {
-  title: "Suwarna Pyakurel — ML Research & Signal Analysis",
-  description:
-    "Portfolio of Suwarna Pyakurel — engineering student and ML researcher focused on medical AI, vibration signal analysis, and research-oriented machine learning.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteTitle,
+    template: "%s | Suwarna Pyakurel",
+  },
+  description: siteDescription,
   keywords: [
     "Suwarna Pyakurel",
+    "Suwarna Pyakurel portfolio",
     "Machine Learning",
     "Medical AI",
+    "Explainable AI",
     "Signal Processing",
+    "Vibration Signal Analysis",
+    "Predictive Maintenance",
+    "IoT",
     "Engineering",
     "Nepal",
     "Research",
+    "Electronics Communication and Information Engineering",
   ],
   authors: [{ name: "Suwarna Pyakurel" }],
   creator: "Suwarna Pyakurel",
+  publisher: "Suwarna Pyakurel",
+  applicationName: "Suwarna Pyakurel Portfolio",
+  alternates: {
+    canonical: "/",
+  },
+  category: "portfolio",
   manifest: "/manifest.json",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -29,17 +60,26 @@ export const metadata: Metadata = {
     apple: { url: "/apple-touch-icon.png" },
   },
   openGraph: {
-    title: "Suwarna Pyakurel — ML Research & Signal Analysis",
-    description:
-      "Engineering student building research-oriented ML systems in medical imaging and signal analysis.",
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName: "Suwarna Pyakurel",
+    images: [
+      {
+        url: "/professional-headshot-of-young-engineering-student.png",
+        width: 640,
+        height: 800,
+        alt: "Suwarna Pyakurel, engineering student and ML researcher",
+      },
+    ],
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Suwarna Pyakurel — ML Research & Signal Analysis",
-    description:
-      "Engineering student building research-oriented ML systems in medical imaging and signal analysis.",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/professional-headshot-of-young-engineering-student.png"],
   },
 }
 

@@ -15,8 +15,10 @@ const socialLinks = [
 const focusAreas = [
   "Medical AI",
   "Signal Processing",
-  "Machine Learning",
+  "Scientific ML",
   "Predictive Maintenance",
+  "Robotics",
+  "IoT",
 ]
 
 const stats = [

@@ -1,7 +1,9 @@
 {
   "name": "Suwarna Pyakurel",
   "short_name": "Suwarna",
-  "description": "ML research and signal analysis portfolio",
+  "description": "Portfolio of Suwarna Pyakurel, focused on machine learning research, medical AI, signal analysis, IoT, and engineering projects.",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/favicon.svg",
