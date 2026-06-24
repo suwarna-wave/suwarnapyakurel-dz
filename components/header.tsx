@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { Menu, X } from "lucide-react"
+import { Menu, Moon, Sun, X } from "lucide-react"
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -16,6 +16,15 @@ export function Header() {
   const [activeSection, setActiveSection] = useState("hero")
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [theme, setTheme] = useState<"dark" | "cream">("dark")
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem("theme")
+    const nextTheme = savedTheme === "cream" ? "cream" : "dark"
+
+    document.documentElement.classList.toggle("dark", nextTheme === "dark")
+    setTheme(nextTheme)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +49,14 @@ export function Header() {
     handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "cream" : "dark"
+
+    document.documentElement.classList.toggle("dark", nextTheme === "dark")
+    window.localStorage.setItem("theme", nextTheme)
+    setTheme(nextTheme)
+  }
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
@@ -97,15 +114,28 @@ export function Header() {
             ))}
           </nav>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden border border-border/70 bg-card/45"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="border border-border/70 bg-card/45 text-muted-foreground hover:text-foreground"
+              onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Switch to cream mode" : "Switch to dark mode"}
+              title={theme === "dark" ? "Cream mode" : "Dark mode"}
+            >
+              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden border border-border/70 bg-card/45"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
         </div>
 
         {mobileOpen && (
