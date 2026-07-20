@@ -180,7 +180,7 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <div className="mt-12 border border-border bg-card px-5 py-6 text-center">
+        <div className="mt-12 rounded-xl border border-border bg-card px-5 py-6 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/30 hover:shadow-[0_18px_40px_-30px_rgba(0,0,0,0.45)]">
           <p className="text-sm text-muted-foreground mb-4">More projects and experiments on GitHub</p>
           <Button variant="outline" asChild>
             <a href="https://github.com/suwarna-wave" target="_blank" rel="noopener noreferrer">

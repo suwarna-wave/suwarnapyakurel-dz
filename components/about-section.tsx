@@ -13,7 +13,23 @@ const skillGroups = [
   },
   {
     category: "Engineering & Research",
-    skills: ["Python", "Scientific ML", "Signal Processing", "Robotics", "IoT", "Go (exploring)"],
+    skills: [
+      "Python",
+      "C/C++",
+      "Scientific ML",
+      "Deep Learning",
+      "Explainable AI",
+      "Medical Imaging",
+      "Signal Processing",
+      "FFT Analysis",
+      "Robotics",
+      "IoT",
+      "Embedded Systems",
+      "Arduino",
+      "Linux",
+      "Git",
+      "Go (exploring)",
+    ],
   },
 ]
 
@@ -100,10 +116,15 @@ export function AboutSection() {
 
             <div>
               <h3 className="mb-4 text-sm font-medium text-foreground">Professional focus</h3>
-              <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
+              <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
                 {directions.map((direction) => (
-                  <div key={direction.title} className="bg-card p-4">
-                    <direction.icon className="mb-3 h-4 w-4 text-foreground" />
+                  <div
+                    key={direction.title}
+                    className="group bg-card p-4 transition-all duration-300 hover:bg-accent/55"
+                  >
+                    <div className="mb-3 grid h-8 w-8 place-items-center rounded-lg bg-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:bg-background">
+                      <direction.icon className="h-4 w-4 text-foreground" />
+                    </div>
                     <h4 className="text-sm font-medium text-foreground">{direction.title}</h4>
                     <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{direction.description}</p>
                   </div>
@@ -160,10 +181,10 @@ export function AboutSection() {
           <h3 className="text-lg font-medium mb-6">Selected Achievements</h3>
           <div className="grid sm:grid-cols-2 gap-4">
             {achievements.map((item) => (
-              <Card key={item.title} className="polished-card">
+              <Card key={item.title} className="polished-card group">
                 <CardContent className="p-5">
                   <div className="flex gap-3">
-                    <div className="h-fit rounded-md border border-border/70 bg-muted p-2">
+                    <div className="h-fit rounded-lg border border-border/70 bg-muted p-2 transition-transform duration-300 group-hover:-translate-y-0.5">
                       <item.icon className="h-4 w-4 text-primary" />
                     </div>
                     <div>

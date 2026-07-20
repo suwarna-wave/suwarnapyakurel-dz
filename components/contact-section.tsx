@@ -82,7 +82,7 @@ export function ContactSection() {
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="group flex items-center gap-3 border border-border bg-card p-3 transition-colors hover:border-foreground"
+                  className="group flex items-center gap-3 rounded-xl border border-border bg-card p-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/35 hover:shadow-[0_16px_35px_-28px_rgba(0,0,0,0.5)]"
                 >
                   <item.icon className="h-4 w-4 shrink-0 text-primary" />
                   <div className="min-w-0">

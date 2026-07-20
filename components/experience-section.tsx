@@ -106,18 +106,18 @@ export function ExperienceSection() {
           </p>
         </div>
 
-        <div className="mb-14 grid gap-px border border-border bg-border sm:grid-cols-3">
-          <div className="bg-card p-5">
+        <div className="mb-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
+          <div className="bg-card p-5 transition-colors duration-300 hover:bg-accent/55">
             <p className="mono-label text-muted-foreground">Current practice</p>
             <p className="mt-2 font-medium text-foreground">SAP Consulting</p>
             <p className="mt-1 text-xs leading-5 text-muted-foreground">Process alignment, implementation assistance, and user support.</p>
           </div>
-          <div className="bg-card p-5">
+          <div className="bg-card p-5 transition-colors duration-300 hover:bg-accent/55">
             <p className="mono-label text-muted-foreground">2.5+ years</p>
             <p className="mt-2 font-medium text-foreground">Strategic PR & Outreach</p>
             <p className="mt-1 text-xs leading-5 text-muted-foreground">Campaigns, partnerships, stakeholders, and program visibility.</p>
           </div>
-          <div className="bg-card p-5">
+          <div className="bg-card p-5 transition-colors duration-300 hover:bg-accent/55">
             <p className="mono-label text-muted-foreground">Technical foundation</p>
             <p className="mt-2 font-medium text-foreground">Engineering & Research</p>
             <p className="mt-1 text-xs leading-5 text-muted-foreground">Scientific ML, robotics, IoT, signal analysis, and Go.</p>

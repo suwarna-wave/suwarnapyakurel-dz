@@ -13,7 +13,7 @@ const socialLinks = [
 
 const focusAreas = [
   "SAP Consulting",
-  "PR Strategy",
+  "Strategic PR",
   "Outreach Management",
   "Scientific ML",
   "Robotics & IoT",
@@ -52,13 +52,13 @@ export function HeroSection() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button onClick={() => scrollToSection("#projects")} className="h-11 rounded-none px-6">
+              <Button onClick={() => scrollToSection("#projects")} className="h-11 rounded-lg px-6">
                 Explore my work
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button
                 variant="outline"
-                className="h-11 rounded-none bg-transparent px-6"
+                className="h-11 rounded-lg bg-transparent px-6"
                 onClick={() => window.open(getAssetPath("/Suwarna_Pyakurel_CV.pdf"), "_blank")}
               >
                 <Download className="mr-2 h-4 w-4" />
@@ -74,7 +74,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.name}
-                  className="grid h-10 w-10 place-items-center border border-border bg-secondary text-foreground shadow-[3px_3px_0_#111] transition-transform hover:-translate-y-0.5"
+                  className="grid h-10 w-10 place-items-center rounded-lg border border-border bg-secondary text-foreground shadow-[3px_3px_0_#111] transition-all duration-200 hover:-translate-y-1 hover:bg-accent"
                 >
                   <link.icon className="h-4 w-4" />
                 </a>
@@ -89,33 +89,37 @@ export function HeroSection() {
                 <span className="font-mono text-xs text-white/50">NP</span>
               </div>
 
-              <div className="relative overflow-hidden border border-white/15 bg-white/5">
-                <Image
-                  src={getAssetPath("/suwarna-pyakurel.png")}
-                  alt="Suwarna Pyakurel at ICRTAI"
-                  width={747}
-                  height={1024}
-                  priority
-                  className="h-[430px] w-full object-cover object-top sm:h-[500px] lg:h-[clamp(220px,42vh,390px)]"
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent px-5 pb-5 pt-20">
-                  <p className="text-xl font-bold tracking-[-0.025em]">Strategy backed by technical understanding.</p>
-                  <p className="mt-2 max-w-sm text-xs leading-5 text-white/65">
-                    Managing people, partnerships, and communication while staying close to engineering and research.
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 border-l border-white/20">
-                {focusAreas.map((area, index) => (
-                  <div
-                    key={area}
-                    className="border-b border-r border-white/20 px-4 py-3"
-                  >
-                    <span className="font-mono text-[0.62rem] text-white/35">0{index + 1}</span>
-                    <p className="mt-1.5 text-xs font-medium text-white/85">{area}</p>
+              <div className="group overflow-hidden rounded-xl border border-white/15 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:shadow-[0_24px_60px_-28px_rgba(255,255,255,0.22)]">
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={getAssetPath("/suwarna-pyakurel.png")}
+                    alt="Suwarna Pyakurel at ICRTAI"
+                    width={747}
+                    height={1024}
+                    priority
+                    className="h-[430px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.025] sm:h-[500px] lg:h-[clamp(220px,42vh,390px)]"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent px-5 pb-5 pt-20">
+                    <p className="text-xl font-bold tracking-[-0.025em]">Strategy backed by technical understanding.</p>
+                    <p className="mt-2 max-w-sm text-xs leading-5 text-white/65">
+                      Managing people, partnerships, and communication while staying close to engineering and research.
+                    </p>
                   </div>
-                ))}
+                </div>
+
+                <div className="grid grid-cols-2 border-t border-white/20">
+                  {focusAreas.map((area, index) => (
+                    <div
+                      key={area}
+                      className={`px-4 py-3 transition-colors duration-200 hover:bg-white/10 ${
+                        index % 2 === 0 ? "border-r border-white/20" : ""
+                      } ${index < focusAreas.length - 2 ? "border-b border-white/20" : ""}`}
+                    >
+                      <span className="font-mono text-[0.62rem] text-white/35">0{index + 1}</span>
+                      <p className="mt-1.5 text-xs font-medium text-white/85">{area}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
 
             </div>
