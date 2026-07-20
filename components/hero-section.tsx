@@ -33,8 +33,8 @@ export function HeroSection() {
         style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%)" }}
       />
 
-      <div className="section-container relative flex min-h-[calc(100vh-4rem)] items-center py-14 lg:py-10">
-        <div className="grid w-full items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <div className="section-container relative flex min-h-[calc(100vh-4rem)] items-center py-14 lg:items-start lg:pb-6 lg:pt-5">
+        <div className="grid w-full items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:gap-16">
           <div className="relative z-10 max-w-2xl">
             <p className="mono-label text-muted-foreground">Hello, I am</p>
             <h1 className="mt-8 text-5xl font-black leading-[0.94] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-7xl">
@@ -96,7 +96,7 @@ export function HeroSection() {
                   width={747}
                   height={1024}
                   priority
-                  className="h-[430px] w-full object-cover object-top sm:h-[500px] lg:h-[320px] xl:h-[390px]"
+                  className="h-[430px] w-full object-cover object-top sm:h-[500px] lg:h-[clamp(220px,42vh,390px)]"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent px-5 pb-5 pt-20">
                   <p className="text-xl font-bold tracking-[-0.025em]">Strategy backed by technical understanding.</p>
@@ -118,13 +118,6 @@ export function HeroSection() {
                 ))}
               </div>
 
-              <button
-                onClick={() => scrollToSection("#contact")}
-                className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white"
-              >
-                Start a conversation
-                <ArrowRight className="h-3.5 w-3.5" />
-              </button>
             </div>
           </div>
         </div>
