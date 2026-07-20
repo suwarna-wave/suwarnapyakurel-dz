@@ -35,7 +35,7 @@ export function HeroSection() {
 
       <div className="section-container relative flex min-h-[calc(100vh-4rem)] items-center py-14 lg:items-start lg:pb-6 lg:pt-5">
         <div className="grid w-full items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:gap-16">
-          <div className="relative z-10 max-w-2xl">
+          <div className="relative z-10 max-w-2xl lg:max-w-[29rem] lg:-translate-x-4 xl:-translate-x-6">
             <p className="mono-label text-muted-foreground">Hello, I am</p>
             <h1 className="mt-8 text-5xl font-black leading-[0.94] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-7xl">
               Suwarna
