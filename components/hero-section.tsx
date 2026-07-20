@@ -28,11 +28,13 @@ export function HeroSection() {
 
   return (
     <section id="hero" className="relative min-h-screen overflow-hidden pt-16">
-      <div className="absolute inset-y-0 right-0 hidden w-[49%] bg-black lg:block" />
-      <div className="absolute inset-y-0 left-[45%] hidden w-32 -skew-x-[9deg] bg-black lg:block" />
+      <div
+        className="absolute inset-y-0 right-0 hidden w-[56%] bg-black lg:block"
+        style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%)" }}
+      />
 
-      <div className="section-container relative flex min-h-[calc(100vh-4rem)] items-center py-14 lg:py-20">
-        <div className="grid w-full items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+      <div className="section-container relative flex min-h-[calc(100vh-4rem)] items-center py-14 lg:py-10">
+        <div className="grid w-full items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div className="relative z-10 max-w-2xl">
             <p className="mono-label text-muted-foreground">Hello, I am</p>
             <h1 className="mt-8 text-5xl font-black leading-[0.94] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-7xl">
@@ -82,7 +84,7 @@ export function HeroSection() {
 
           <div className="relative z-10 -mx-5 bg-black px-5 py-14 text-white sm:-mx-8 sm:px-8 lg:mx-0 lg:bg-transparent lg:p-0">
             <div className="mx-auto max-w-md">
-              <div className="mb-8 flex items-end justify-between border-b border-white/20 pb-4">
+              <div className="mb-4 flex items-end justify-between border-b border-white/20 pb-3">
                 <span className="mono-label text-white/50">Consulting · Strategy · Engineering</span>
                 <span className="font-mono text-xs text-white/50">NP</span>
               </div>
@@ -94,7 +96,7 @@ export function HeroSection() {
                   width={747}
                   height={1024}
                   priority
-                  className="h-[430px] w-full object-cover object-top sm:h-[500px] lg:h-[430px]"
+                  className="h-[430px] w-full object-cover object-top sm:h-[500px] lg:h-[320px] xl:h-[390px]"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent px-5 pb-5 pt-20">
                   <p className="text-xl font-bold tracking-[-0.025em]">Strategy backed by technical understanding.</p>
@@ -104,21 +106,21 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 border-l border-t border-white/20">
+              <div className="grid grid-cols-2 border-l border-white/20">
                 {focusAreas.map((area, index) => (
                   <div
                     key={area}
-                    className="border-b border-r border-white/20 px-4 py-4"
+                    className="border-b border-r border-white/20 px-4 py-3"
                   >
                     <span className="font-mono text-[0.62rem] text-white/35">0{index + 1}</span>
-                    <p className="mt-2 text-xs font-medium text-white/85">{area}</p>
+                    <p className="mt-1.5 text-xs font-medium text-white/85">{area}</p>
                   </div>
                 ))}
               </div>
 
               <button
                 onClick={() => scrollToSection("#contact")}
-                className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white"
+                className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white"
               >
                 Start a conversation
                 <ArrowRight className="h-3.5 w-3.5" />
