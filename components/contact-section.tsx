@@ -30,10 +30,10 @@ const contactInfo = [
 ]
 
 const availability = [
+  "SAP consulting and implementation assistance",
+  "Strategic PR, outreach, and stakeholder management",
   "Research collaborations in ML and signal analysis",
-  "Internship opportunities",
-  "Freelance technical projects",
-  "Speaking engagements",
+  "Robotics, IoT, and engineering projects",
 ]
 
 export function ContactSection() {
@@ -63,13 +63,13 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="border-t border-border/70 bg-muted/25 py-20 lg:py-24">
+    <section id="contact" className="border-t border-border bg-secondary/45 py-20 lg:py-24">
       <div className="section-container">
         <div className="mb-12">
-          <p className="section-kicker">Reach out</p>
+          <p className="section-kicker">04 / Reach out</p>
           <h2 className="section-heading">Contact</h2>
           <p className="section-subheading">
-            Open to research collaborations, internships, and conversations about ML, signal analysis, and engineering.
+            Open to consulting, strategic communications, program leadership, and technical collaboration.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export function ContactSection() {
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="group flex items-center gap-3 rounded-lg border border-border/70 bg-card/70 p-3 transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:bg-accent/40"
+                  className="group flex items-center gap-3 border border-border bg-card p-3 transition-colors hover:border-foreground"
                 >
                   <item.icon className="h-4 w-4 shrink-0 text-primary" />
                   <div className="min-w-0">

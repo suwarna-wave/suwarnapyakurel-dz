@@ -16,12 +16,12 @@ const structuredData = {
       "@id": `${siteUrl}/#person`,
       name: "Suwarna Pyakurel",
       url: siteUrl,
-      image: `${siteUrl}/professional-headshot-of-young-engineering-student.png`,
+      image: `${siteUrl}/suwarna-pyakurel.png`,
       email: "mailto:suwarnapyakurel5@gmail.com",
       telephone: "+9779840036060",
-      jobTitle: "Engineering Student and Machine Learning Researcher",
+      jobTitle: "SAP Consultant and Strategic PR & Outreach Lead",
       description:
-        "Electronics, Communication and Information Engineering undergraduate focused on medical AI, vibration signal analysis, IoT systems, and research-oriented machine learning.",
+        "SAP consultant with 2.5+ years in strategic PR and outreach management, supported by an engineering background in Scientific ML, robotics, IoT, and signal analysis.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Biratnagar",
@@ -33,6 +33,12 @@ const structuredData = {
         name: "Tribhuwan University, IOE Purwanchal Campus",
       },
       knowsAbout: [
+        "SAP consulting",
+        "Strategic public relations",
+        "Outreach management",
+        "Stakeholder communication",
+        "Robotics",
+        "Go programming",
         "Machine learning",
         "Medical AI",
         "Explainable AI",
@@ -40,7 +46,7 @@ const structuredData = {
         "Vibration signal analysis",
         "Predictive maintenance",
         "IoT systems",
-        "Robotics",
+        "SAP ERP",
       ],
       sameAs: [
         "https://github.com/suwarna-wave",
@@ -53,7 +59,7 @@ const structuredData = {
       url: siteUrl,
       name: "Suwarna Pyakurel",
       description:
-        "Portfolio for Suwarna Pyakurel covering machine learning research, medical AI, signal analysis, IoT, projects, experience, and contact information.",
+        "Portfolio for Suwarna Pyakurel covering SAP consulting, strategic PR and outreach management, engineering, Scientific ML, robotics, and projects.",
       publisher: {
         "@id": `${siteUrl}/#person`,
       },
@@ -63,7 +69,7 @@ const structuredData = {
       "@type": "ProfilePage",
       "@id": `${siteUrl}/#profile-page`,
       url: siteUrl,
-      name: "Suwarna Pyakurel - ML Research & Signal Analysis",
+      name: "Suwarna Pyakurel - SAP Consultant & Strategic Outreach",
       about: {
         "@id": `${siteUrl}/#person`,
       },
@@ -72,7 +78,7 @@ const structuredData = {
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: `${siteUrl}/professional-headshot-of-young-engineering-student.png`,
+        url: `${siteUrl}/suwarna-pyakurel.png`,
       },
       mainEntity: {
         "@id": `${siteUrl}/#person`,

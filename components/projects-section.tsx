@@ -47,7 +47,6 @@ const projects: Project[] = [
       "22 passing tests with visualization pipeline",
     ],
     icon: Activity,
-    featured: true,
     github: "https://github.com/suwarna-wave/motor-vibration-fault-detector",
   },
   {
@@ -63,7 +62,6 @@ const projects: Project[] = [
       "WYSIWYG PDF export via Qt print pipeline",
     ],
     icon: FileText,
-    featured: true,
     github: "https://github.com/suwarna-wave/markdown-pdf",
   },
   {
@@ -118,7 +116,7 @@ export function ProjectsSection() {
     <section id="projects" className="border-t border-border/70 py-20 lg:py-24">
       <div className="section-container">
         <div className="mb-12">
-          <p className="section-kicker">Selected work</p>
+          <p className="section-kicker">03 / Selected work</p>
           <h2 className="section-heading">Projects</h2>
           <p className="section-subheading">
             Selected work spanning signal analysis, developer tooling, IoT systems, and algorithm visualization.
@@ -129,7 +127,7 @@ export function ProjectsSection() {
           {projects.map((project) => (
             <Card
               key={project.title}
-              className={project.featured ? "polished-card md:col-span-1 ring-1 ring-primary/20" : "polished-card"}
+              className={project.featured ? "polished-card md:col-span-2 border-foreground" : "polished-card"}
             >
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex items-start justify-between gap-3 mb-4">
@@ -182,7 +180,7 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <div className="mt-12 rounded-lg border border-border/70 bg-card/55 px-5 py-6 text-center">
+        <div className="mt-12 border border-border bg-card px-5 py-6 text-center">
           <p className="text-sm text-muted-foreground mb-4">More projects and experiments on GitHub</p>
           <Button variant="outline" asChild>
             <a href="https://github.com/suwarna-wave" target="_blank" rel="noopener noreferrer">

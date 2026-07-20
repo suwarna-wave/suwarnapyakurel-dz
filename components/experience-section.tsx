@@ -96,14 +96,32 @@ const education = [
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="border-t border-border/70 bg-muted/25 py-20 lg:py-24">
+    <section id="experience" className="border-t border-border bg-secondary/45 py-20 lg:py-24">
       <div className="section-container">
         <div className="mb-12">
-          <p className="section-kicker">Trajectory</p>
+          <p className="section-kicker">02 / Trajectory</p>
           <h2 className="section-heading">Experience & Education</h2>
           <p className="section-subheading">
-            Leadership and technical roles that shaped my path from community outreach to research-oriented engineering.
+            A track record spanning consulting, operations, strategic communications, and technical program delivery.
           </p>
+        </div>
+
+        <div className="mb-14 grid gap-px border border-border bg-border sm:grid-cols-3">
+          <div className="bg-card p-5">
+            <p className="mono-label text-muted-foreground">Current practice</p>
+            <p className="mt-2 font-medium text-foreground">SAP Consulting</p>
+            <p className="mt-1 text-xs leading-5 text-muted-foreground">Process alignment, implementation assistance, and user support.</p>
+          </div>
+          <div className="bg-card p-5">
+            <p className="mono-label text-muted-foreground">2.5+ years</p>
+            <p className="mt-2 font-medium text-foreground">Strategic PR & Outreach</p>
+            <p className="mt-1 text-xs leading-5 text-muted-foreground">Campaigns, partnerships, stakeholders, and program visibility.</p>
+          </div>
+          <div className="bg-card p-5">
+            <p className="mono-label text-muted-foreground">Technical foundation</p>
+            <p className="mt-2 font-medium text-foreground">Engineering & Research</p>
+            <p className="mt-1 text-xs leading-5 text-muted-foreground">Scientific ML, robotics, IoT, signal analysis, and Go.</p>
+          </div>
         </div>
 
         <div className="mb-16">

@@ -5,26 +5,26 @@
 
 :root {
   color-scheme: light;
-  --background: oklch(0.972 0.018 82);
-  --foreground: oklch(0.19 0.026 238);
-  --card: oklch(0.992 0.01 88);
-  --card-foreground: oklch(0.19 0.026 238);
-  --popover: oklch(0.992 0.01 88);
-  --popover-foreground: oklch(0.19 0.026 238);
-  --primary: oklch(0.5 0.115 202);
-  --primary-foreground: oklch(0.99 0.012 88);
-  --secondary: oklch(0.93 0.022 86);
-  --secondary-foreground: oklch(0.25 0.026 238);
-  --muted: oklch(0.925 0.02 82);
-  --muted-foreground: oklch(0.47 0.035 238);
-  --accent: oklch(0.895 0.032 78);
-  --accent-foreground: oklch(0.23 0.03 238);
+  --background: oklch(0.965 0.004 90);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(0.99 0.002 90);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(0.99 0.002 90);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.17 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.925 0.004 90);
+  --secondary-foreground: oklch(0.2 0 0);
+  --muted: oklch(0.925 0.004 90);
+  --muted-foreground: oklch(0.46 0 0);
+  --accent: oklch(0.895 0.003 90);
+  --accent-foreground: oklch(0.17 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0.012 88);
-  --border: oklch(0.84 0.028 82);
-  --input: oklch(0.86 0.026 82);
-  --ring: oklch(0.55 0.12 202);
-  --radius: 0.5rem;
+  --border: oklch(0.82 0.004 90);
+  --input: oklch(0.84 0.004 90);
+  --ring: oklch(0.2 0 0);
+  --radius: 0.25rem;
 }
 
 .dark {
@@ -90,17 +90,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image:
-      linear-gradient(to right, oklch(0.52 0.055 82 / 0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, oklch(0.52 0.055 82 / 0.08) 1px, transparent 1px);
-    background-size: 44px 44px;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-  }
-
-  .dark body {
-    background-image:
-      linear-gradient(to right, oklch(1 0 0 / 0.035) 1px, transparent 1px),
-      linear-gradient(to bottom, oklch(1 0 0 / 0.035) 1px, transparent 1px);
   }
 
   ::selection {
@@ -109,25 +99,38 @@
 }
 
 .section-container {
-  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply mx-auto max-w-6xl px-5 sm:px-8 lg:px-10;
 }
 
 .section-heading {
-  @apply text-2xl sm:text-3xl font-semibold tracking-tight text-foreground;
+  @apply text-3xl font-bold tracking-[-0.035em] text-foreground sm:text-4xl;
 }
 
 .section-subheading {
-  @apply text-muted-foreground mt-3 max-w-2xl leading-relaxed;
+  @apply mt-4 max-w-2xl leading-relaxed text-muted-foreground;
 }
 
 .section-kicker {
-  @apply mb-3 text-xs font-medium uppercase tracking-[0.18em] text-primary;
+  @apply mb-3 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-muted-foreground;
 }
 
 .polished-card {
-  @apply border-border/80 bg-card/80 shadow-[0_18px_60px_-42px_rgba(0,0,0,0.65)] backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_24px_70px_-44px_rgba(0,0,0,0.75)];
+  @apply rounded-none border-border bg-card shadow-none transition-colors duration-200 hover:border-foreground/45;
 }
 
 .quiet-link {
   @apply text-muted-foreground transition-colors hover:text-foreground;
+}
+
+.section-rule {
+  @apply mb-12 flex items-center gap-4;
+}
+
+.section-rule::after {
+  content: "";
+  @apply h-px flex-1 bg-border;
+}
+
+.mono-label {
+  @apply font-mono text-[0.68rem] font-medium uppercase tracking-[0.16em];
 }

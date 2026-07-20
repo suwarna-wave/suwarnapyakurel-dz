@@ -6,9 +6,9 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const siteUrl = "https://suwarnapyakurel.com.np"
-const siteTitle = "Suwarna Pyakurel - ML Research & Signal Analysis"
+const siteTitle = "Suwarna Pyakurel - SAP Consultant & Strategic Outreach"
 const siteDescription =
-  "Portfolio of Suwarna Pyakurel, an electronics engineering student and ML researcher in Nepal focused on medical AI, vibration signal analysis, IoT, and research-oriented machine learning."
+  "Portfolio of Suwarna Pyakurel — SAP consultant with 2.5+ years in strategic PR and outreach management, supported by an engineering background in Scientific ML, robotics, and IoT."
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   keywords: [
     "Suwarna Pyakurel",
     "Suwarna Pyakurel portfolio",
+    "SAP Consultant",
+    "Strategic PR",
+    "Outreach Management",
+    "Stakeholder Management",
+    "Scientific Machine Learning",
+    "Robotics",
+    "Go Programming",
     "Machine Learning",
     "Medical AI",
     "Explainable AI",
@@ -27,6 +34,7 @@ export const metadata: Metadata = {
     "Vibration Signal Analysis",
     "Predictive Maintenance",
     "IoT",
+    "SAP ERP",
     "Engineering",
     "Nepal",
     "Research",
@@ -66,10 +74,10 @@ export const metadata: Metadata = {
     siteName: "Suwarna Pyakurel",
     images: [
       {
-        url: "/professional-headshot-of-young-engineering-student.png",
-        width: 640,
-        height: 800,
-        alt: "Suwarna Pyakurel, engineering student and ML researcher",
+        url: "/suwarna-pyakurel.png",
+        width: 747,
+        height: 1024,
+        alt: "Suwarna Pyakurel",
       },
     ],
     type: "website",
@@ -79,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/professional-headshot-of-young-engineering-student.png"],
+    images: ["/suwarna-pyakurel.png"],
   },
 }
 
@@ -89,7 +97,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         {children}
         <Analytics />
