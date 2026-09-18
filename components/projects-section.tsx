@@ -72,6 +72,7 @@ const projects: Project[] = [
     category: "IoT",
     technologies: ["Arduino", "Sensors", "IoT", "Automation"],
     highlights: [
+      "Winner, Yantra 9.0 Business Cup Expo (2024) — led Team ERC's entry",
       "Soil moisture-based automated irrigation",
       "Real-time environmental monitoring",
       "Remote farm management interface",

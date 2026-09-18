@@ -59,9 +59,11 @@ const directions = [
 const achievements = [
   {
     icon: Award,
-    title: "Yantra 9.0 Winners",
-    description: "Won Yantra Swarmanoid and Yantra Business Cup Expo at international robotics competition.",
+    title: "Yantra 9.0 — Business Cup Expo Winner",
+    description:
+      "Led Team ERC's winning Business Cup Expo entry with IoT Based Smart Agriculture, a sensor-driven farming system designed for Nepal's diverse landscape. Awarded at Yantra 9.0, an international robotics competition and technology festival organized by the Robotics Association of Nepal. Team ERC also won the Swarmanoid title.",
     year: "2024",
+    sourceUrl: "https://robotics.ioepc.edu.np/blog/achievements/yantra9/",
   },
   {
     icon: Lightbulb,
@@ -177,8 +179,8 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div className="mt-16">
-          <h3 className="text-lg font-medium mb-6">Selected Achievements</h3>
+        <div id="awards" className="mt-16 scroll-mt-24">
+          <h3 className="text-lg font-medium mb-6">Awards & Achievements</h3>
           <div className="grid sm:grid-cols-2 gap-4">
             {achievements.map((item) => (
               <Card key={item.title} className="polished-card group">
@@ -193,6 +195,16 @@ export function AboutSection() {
                         <span className="text-xs text-muted-foreground shrink-0">{item.year}</span>
                       </div>
                       <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{item.description}</p>
+                      {item.sourceUrl && (
+                        <a
+                          href={item.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-3 inline-block rounded-sm text-xs font-medium text-primary underline underline-offset-4 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        >
+                          Yantra 9.0 — Robotics Club report
+                        </a>
+                      )}
                     </div>
                   </div>
                 </CardContent>
