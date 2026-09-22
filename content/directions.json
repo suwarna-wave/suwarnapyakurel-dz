@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "BrainCircuit",
+    "title": "Applied AI & Research",
+    "description": "Explainable deep learning, model evaluation and signal processing research."
+  },
+  {
+    "icon": "Building2",
+    "title": "Operations & Partnerships",
+    "description": "Co-founder and COO of Curio Tech, coordinating delivery and institutional collaborations."
+  },
+  {
+    "icon": "Users",
+    "title": "Technical Outreach",
+    "description": "Program communications, student learning communities and international STEM events."
+  },
+  {
+    "icon": "Bot",
+    "title": "Engineering Practice",
+    "description": "Software systems, embedded prototypes, IoT and robotics; exploring Go."
+  }
+]

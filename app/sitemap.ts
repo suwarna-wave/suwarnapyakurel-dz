@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 
-const siteUrl = "https://suwarnapyakurel.com.np"
+import profile from "@/content/profile.json"
+const siteUrl = profile.siteUrl
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()

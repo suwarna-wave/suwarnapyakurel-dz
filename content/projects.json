@@ -1,0 +1,225 @@
+[
+  {
+    "title": "Explainable Pneumonia Detection & Severity Estimation",
+    "description": "Co-developed a chest X-ray research pipeline in a four-member academic team, integrating Normal/Pneumonia classification, evaluation, explainability and web inference.",
+    "period": "2026",
+    "category": "Medical AI",
+    "technologies": [
+      "Python",
+      "PyTorch",
+      "EfficientNet-B0",
+      "Grad-CAM",
+      "FastAPI",
+      "Express",
+      "React"
+    ],
+    "highlights": [
+      "EfficientNet-B0 achieved ROC-AUC 0.9624 and F1-score 0.9185 in project evaluation",
+      "Grad-CAM heatmaps with a post-prediction severity heuristic combining model confidence and activation extent",
+      "Image upload, inference, visualization and report export"
+    ],
+    "icon": "Activity",
+    "featured": true,
+    "github": "https://github.com/suwarna-wave/Minor-Project-Pneumonia",
+    "selected": true
+  },
+  {
+    "title": "Motor Vibration Fault Detector",
+    "description": "Predictive maintenance system that analyzes vibration sensor data using FFT-based feature extraction to detect imbalance, misalignment, and bearing faults in rotating machinery.",
+    "period": "Mar 2025",
+    "category": "Signal Analysis",
+    "technologies": [
+      "Python",
+      "NumPy",
+      "FFT",
+      "Feature Engineering",
+      "Diagnostics"
+    ],
+    "highlights": [
+      "Time and frequency-domain feature extraction (RMS, kurtosis, crest factor)",
+      "Automated fault classification with health scoring (0–100)",
+      "22 passing tests with visualization pipeline"
+    ],
+    "icon": "Activity",
+    "github": "https://github.com/suwarna-wave/motor-vibration-fault-detector",
+    "selected": true
+  },
+  {
+    "title": "QR-Based Delegate Tracking & Activity Monitoring",
+    "description": "Independently designed and deployed QR attendance and activity tracking for IOAA-Jr. 2024 in Kathmandu.",
+    "period": "Oct 2024",
+    "category": "Event Technology",
+    "technologies": [
+      "Python",
+      "Django",
+      "SQLite",
+      "JavaScript",
+      "QR Encoding"
+    ],
+    "highlights": [
+      "Supported 200+ participants, delegates, organizers and personnel, including international delegates from 19 countries",
+      "Centralized checkpoint check-ins, attendance records and activity logs",
+      "Managed deployment, on-site support, monitoring and troubleshooting"
+    ],
+    "icon": "QrCode",
+    "selected": true
+  },
+  {
+    "title": "iLoveQR.app — QR Generation & Design Platform",
+    "description": "Co-developed a deployed QR generation and design web application in a four-member team.",
+    "period": "Deployed product",
+    "category": "Web Application",
+    "technologies": [],
+    "highlights": [
+      "10 content types, including URLs, vCards, Wi-Fi, crypto payments and calendar events",
+      "9 visual presets with configurable colors, logos, frames and shapes",
+      "Live previews and PNG/SVG/JPEG/PDF export at resolutions up to 2048 px"
+    ],
+    "icon": "QrCode",
+    "selected": true
+  },
+  {
+    "title": "Markdown PDF Studio",
+    "description": "Lightweight desktop Markdown editor with live GitHub-flavored preview and one-click A4 PDF export — built for low-resource environments.",
+    "period": "2026",
+    "category": "Developer Tool",
+    "technologies": [
+      "Python",
+      "PySide6",
+      "markdown-it-py",
+      "Qt WebEngine"
+    ],
+    "highlights": [
+      "Split-pane editor with debounced live preview",
+      "Syntax highlighting, footnotes, and safe HTML sanitization",
+      "WYSIWYG PDF export via Qt print pipeline"
+    ],
+    "icon": "FileText",
+    "github": "https://github.com/suwarna-wave/markdown-pdf",
+    "selected": true
+  },
+  {
+    "title": "IoT-Based Smart Agriculture System",
+    "description": "Co-developed an ESP8266 NodeMCU smart agriculture prototype in a four-member team, automating irrigation and cooling through sensor thresholds.",
+    "period": "Apr — May 2023",
+    "category": "IoT",
+    "technologies": [
+      "ESP8266",
+      "Arduino",
+      "DHT11",
+      "BMP280",
+      "I2C",
+      "ThingSpeak"
+    ],
+    "highlights": [
+      "Led Team ERC’s winning Business Cup Expo presentation at Yantra 9.0 (2024)",
+      "Soil-moisture and rain sensing with automated irrigation-pump and cooling-fan control",
+      "OLED monitoring over I2C and ThingSpeak logging"
+    ],
+    "icon": "Cpu",
+    "github": "https://github.com/suwarna-wave/IOT-Based-Agriculture-System",
+    "selected": true
+  },
+  {
+    "title": "TSP Visualization",
+    "description": "Interactive visualization of Traveling Salesman Problem solutions using multiple optimization algorithms, built for algorithm education.",
+    "period": "Feb 2025",
+    "category": "Algorithms DSA",
+    "technologies": [
+      "Python",
+      "Pygame",
+      "DSA",
+      "Optimization"
+    ],
+    "highlights": [
+      "Brute force, genetic, and simulated annealing implementations",
+      "Real-time path visualization with performance metrics",
+      "Interactive city placement for experimentation"
+    ],
+    "icon": "TrendingUp",
+    "github": "https://github.com/suwarna-wave/DSA-lab/blob/main/Projects/TSP.py",
+    "selected": true
+  },
+  {
+    "title": "AVL Tree Visualizer",
+    "description": "Algorithm visualization project for exploring AVL tree insertions, rotations, balancing behavior, and height-aware binary search tree operations.",
+    "period": "2025",
+    "category": "Algorithm DSA",
+    "technologies": [
+      "Python",
+      "Data Structures",
+      "AVL Tree",
+      "Visualization",
+      "Algorithms"
+    ],
+    "highlights": [
+      "Visualizes self-balancing binary search tree behavior",
+      "Demonstrates AVL rotations and height updates",
+      "Built as part of DSA lab algorithm exploration"
+    ],
+    "icon": "TrendingUp",
+    "github": "https://github.com/suwarna-wave/DSA-lab/blob/main/Projects/avltree.py",
+    "selected": true
+  },
+  {
+    "title": "Personalized Budget Tracker",
+    "period": "Mar 2025",
+    "description": "Built a Python desktop application for income and expense tracking, transaction management, spending-pattern visualization and data export.",
+    "technologies": [
+      "Python"
+    ],
+    "category": "Additional Project",
+    "highlights": [],
+    "icon": "FileText",
+    "selected": false
+  },
+  {
+    "title": "Love Note Generator",
+    "period": "Mar 2025",
+    "description": "Created a Python application with randomized romantic notes, interactive challenges and a gamified Love Meter.",
+    "technologies": [
+      "Python"
+    ],
+    "category": "Additional Project",
+    "highlights": [],
+    "icon": "FileText",
+    "selected": false
+  },
+  {
+    "title": "Study Tracker",
+    "period": "Feb 2025",
+    "description": "Developed a Django application with authentication, subject and exam-date management, unit-wise progress, charts and syllabus uploads.",
+    "technologies": [
+      "Django"
+    ],
+    "category": "Additional Project",
+    "highlights": [],
+    "icon": "FileText",
+    "selected": false
+  },
+  {
+    "title": "Library Management System",
+    "period": "Mar 2024",
+    "description": "Built an object-oriented C++ library-resource and book-tracking application at IOE Purwanchal Campus, supervised by Er. Tantra Nath Jha.",
+    "technologies": [
+      "C++",
+      "OOP"
+    ],
+    "category": "Additional Project",
+    "highlights": [],
+    "icon": "FileText",
+    "selected": false
+  },
+  {
+    "title": "Bank Management System",
+    "period": "Jan 2024",
+    "description": "Developed a C application for account management, transactions and data handling at IOE Purwanchal Campus, supervised by Er. Pravin Sangraula.",
+    "technologies": [
+      "C"
+    ],
+    "category": "Additional Project",
+    "highlights": [],
+    "icon": "FileText",
+    "selected": false
+  }
+]

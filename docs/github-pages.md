@@ -22,7 +22,7 @@ Open `http://localhost:3000`.
 ## Test Production Export
 
 ```bash
-pnpm build
+pnpm check
 pnpm dlx serve out
 ```
 

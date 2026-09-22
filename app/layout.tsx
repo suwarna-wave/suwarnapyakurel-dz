@@ -5,10 +5,10 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const siteUrl = "https://suwarnapyakurel.com.np"
-const siteTitle = "Suwarna Pyakurel - SAP Consultant & Strategic Outreach"
-const siteDescription =
-  "Portfolio of Suwarna Pyakurel — SAP consultant with 2.5+ years in strategic PR and outreach management, supported by an engineering background in Scientific ML, robotics, and IoT."
+import profile from "@/content/profile.json"
+const siteUrl = profile.siteUrl
+const siteTitle = profile.siteTitle
+const siteDescription = profile.summary
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -17,32 +17,10 @@ export const metadata: Metadata = {
     template: "%s | Suwarna Pyakurel",
   },
   description: siteDescription,
-  keywords: [
-    "Suwarna Pyakurel",
-    "Suwarna Pyakurel portfolio",
-    "SAP Consultant",
-    "Strategic PR",
-    "Outreach Management",
-    "Stakeholder Management",
-    "Scientific Machine Learning",
-    "Robotics",
-    "Go Programming",
-    "Machine Learning",
-    "Medical AI",
-    "Explainable AI",
-    "Signal Processing",
-    "Vibration Signal Analysis",
-    "Predictive Maintenance",
-    "IoT",
-    "SAP ERP",
-    "Engineering",
-    "Nepal",
-    "Research",
-    "Electronics Communication and Information Engineering",
-  ],
-  authors: [{ name: "Suwarna Pyakurel" }],
-  creator: "Suwarna Pyakurel",
-  publisher: "Suwarna Pyakurel",
+  keywords: [profile.name, "Engineering", "Software", "Technical Leadership", ...profile.researchInterests],
+  authors: [{ name: profile.name }],
+  creator: profile.name,
+  publisher: profile.name,
   applicationName: "Suwarna Pyakurel Portfolio",
   alternates: {
     canonical: "/",
@@ -67,10 +45,10 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     url: "/",
-    siteName: "Suwarna Pyakurel",
+    siteName: profile.name,
     images: [
       {
-        url: "/suwarna-pyakurel.png",
+        url: profile.portrait,
         width: 747,
         height: 1024,
         alt: "Suwarna Pyakurel",
@@ -83,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/suwarna-pyakurel.png"],
+    images: [profile.portrait],
   },
 }
 

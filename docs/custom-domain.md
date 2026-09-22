@@ -1,5 +1,7 @@
 # Custom Domain Setup
 
+Existing operational reference, relocated during the 2026-09-23 audit. DNS/provider settings were not inspected or changed in that audit. Confirm provider requirements before changing records.
+
 The custom domain is `suwarnapyakurel.com.np`.
 
 ## Repository Settings

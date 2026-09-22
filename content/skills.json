@@ -1,0 +1,78 @@
+[
+  {
+    "category": "Programming & Software",
+    "skills": [
+      "Python",
+      "C",
+      "C++",
+      "JavaScript",
+      "OOP",
+      "DSA",
+      "Django",
+      "FastAPI",
+      "React",
+      "Express",
+      "SQLite",
+      "Pygame",
+      "Web Scraping",
+      "Frontend Development",
+      "Git/GitHub",
+      "Linux",
+      "Go (exploring)"
+    ]
+  },
+  {
+    "category": "AI & Signal Processing",
+    "skills": [
+      "PyTorch",
+      "Deep Learning",
+      "CNNs",
+      "Explainable AI",
+      "Grad-CAM",
+      "Model Evaluation",
+      "NumPy",
+      "FFT",
+      "Feature Engineering",
+      "Optimization",
+      "Data Visualization"
+    ]
+  },
+  {
+    "category": "Embedded Systems & IoT",
+    "skills": [
+      "ESP8266/NodeMCU",
+      "Arduino",
+      "Sensor Integration",
+      "I2C",
+      "ThingSpeak",
+      "Automation",
+      "Robotics"
+    ]
+  },
+  {
+    "category": "Research",
+    "skills": [
+      "Literature Review",
+      "Problem Formulation",
+      "Experimentation",
+      "Critical Analysis",
+      "Research Prototyping",
+      "Technical Documentation"
+    ]
+  },
+  {
+    "category": "Consulting & Leadership",
+    "skills": [
+      "SAP ERP",
+      "Process Analysis",
+      "Requirements Gathering",
+      "User Support",
+      "Operations",
+      "Partnerships",
+      "Strategic Branding",
+      "PR",
+      "Event Management",
+      "Public Speaking"
+    ]
+  }
+]

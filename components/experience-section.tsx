@@ -1,98 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { CalendarDays, MapPin } from "lucide-react"
 
-const experiences = [
-  {
-    title: "Co-founder & COO",
-    organization: "Curio Tech Pvt. Ltd.",
-    location: "Nepal · Hybrid",
-    period: "Oct 2025 — Present",
-    description:
-      "Leading operations, strategic partnerships, and organizational growth at Curio Tech, a technology enablement startup focused on digital transformation.",
-    highlights: [
-      "Overseeing operational execution, PR and outreach initiatives, and financial coordination",
-      "Building institutional collaborations and strengthening the startup's digital presence",
-      "Supporting project scaling across Nepal's evolving technology ecosystem",
-    ],
-  },
-  {
-    title: "Outreach Coordinator",
-    organization: "ICRTAI 2025 — International Conference on Recent Trends in Artificial Intelligence",
-    location: "Birtamode, Nepal",
-    period: "Apr 2025 — Present",
-    description:
-      "Coordinating outreach for Nepal's first ICRTAI conference while contributing to the ICTRAI Scientific Research Community — a collaborative hub for young researchers.",
-    highlights: [
-      "Media relations and strategic communications for AI education",
-      "Community building for research-driven initiatives",
-      "Bridging conference outreach with scientific collaboration",
-    ],
-  },
-  {
-    title: "Advisor & DataCamp Maintainer",
-    organization: "EXCESS — Electronics and Communication Engineering Student Society, IOE Purwanchal Campus",
-    location: "Dharan, Nepal",
-    period: "Feb 2026 — Present",
-    description:
-      "Serving as advisor for EXCESS while maintaining DataCamp access and learning support, following a PR & Outreach Lead role for the same society.",
-    highlights: [
-      "PR & Outreach Lead, Jul 2025 to Feb 2026, for society visibility, communications, and student engagement",
-      "Advising student-led technical programs and community initiatives",
-      "Maintaining DataCamp learning access and coordination",
-    ],
-  },
-  {
-    title: "Country Guide & Tech Lead",
-    organization: "Nepal Astronomical Society — IOAA-Jr. 2024",
-    location: "Nepal",
-    period: "Oct 2023 — Present",
-    description:
-      "Technical lead for Nepal's first International Olympiad on Astronomy and Astrophysics Junior, including QR-based participant tracking systems.",
-    highlights: [
-      "System development for international competition logistics",
-      "Astronomical outreach and mentoring programs",
-      "Coordination with government and international partners",
-    ],
-  },
-  {
-    title: "Member",
-    organization: "Astronomy and Space Science Study Research Committee",
-    location: "Biratnagar, Nepal",
-    period: "Jun 2023 — Present",
-    description:
-      "Contributing to regional STEM advancement through technical workshops in Python and Linux, and educational program development.",
-    highlights: [
-      "Python and Linux workshop delivery",
-      "Policy and regional planning contributions",
-      "Government collaboration on STEM initiatives",
-    ],
-  },
-]
-
-const education = [
-  {
-    degree: "Bachelor of Engineering",
-    field: "Electronics, Communication & Information Engineering",
-    institution: "Tribhuwan University, IOE Purwanchal Campus",
-    location: "Dharan, Nepal",
-    period: "Sep 2023 — Present",
-    highlights: [
-      "Active in research committees and technical societies",
-      "Organized CS50 AI Nepal and IOAA-Jr. 2024 events",
-    ],
-  },
-  {
-    degree: "High School — Science",
-    field: "GPA 3.75",
-    institution: "SOS Hermann Gmeiner Secondary School",
-    location: "Bhaktapur, Nepal",
-    period: "Mar 2020 — Jul 2022",
-    highlights: [
-      "Head-boy (batch 2078 BS)",
-      'Provisional discovery of asteroid "2020 WX9"',
-    ],
-  },
-]
+import experiences from "@/content/experience.json"
+import education from "@/content/education.json"
 
 export function ExperienceSection() {
   return (
@@ -108,12 +18,12 @@ export function ExperienceSection() {
 
         <div className="mb-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
           <div className="bg-card p-5 transition-colors duration-300 hover:bg-accent/55">
-            <p className="mono-label text-muted-foreground">Current practice</p>
-            <p className="mt-2 font-medium text-foreground">SAP Consulting</p>
-            <p className="mt-1 text-xs leading-5 text-muted-foreground">Process alignment, implementation assistance, and user support.</p>
+            <p className="mono-label text-muted-foreground">Current role</p>
+            <p className="mt-2 font-medium text-foreground">Co-founder & COO</p>
+            <p className="mt-1 text-xs leading-5 text-muted-foreground">Operations, partnerships and project delivery at Curio Tech.</p>
           </div>
           <div className="bg-card p-5 transition-colors duration-300 hover:bg-accent/55">
-            <p className="mono-label text-muted-foreground">2.5+ years</p>
+            <p className="mono-label text-muted-foreground">Community leadership</p>
             <p className="mt-2 font-medium text-foreground">Strategic PR & Outreach</p>
             <p className="mt-1 text-xs leading-5 text-muted-foreground">Campaigns, partnerships, stakeholders, and program visibility.</p>
           </div>

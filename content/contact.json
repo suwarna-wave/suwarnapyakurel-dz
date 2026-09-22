@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "icon": "Mail",
+      "label": "Email",
+      "value": "suwarnapyakurel5@gmail.com",
+      "href": "mailto:suwarnapyakurel5@gmail.com"
+    },
+    {
+      "icon": "Phone",
+      "label": "Phone",
+      "value": "+977-9840036060",
+      "href": "tel:+9779840036060"
+    },
+    {
+      "icon": "MapPin",
+      "label": "Location",
+      "value": "Biratnagar, Nepal",
+      "href": "https://maps.google.com/?q=Biratnagar,Nepal"
+    }
+  ],
+  "availability": [
+    "Applied AI, software and engineering projects",
+    "Research collaborations in explainable AI and signal processing",
+    "Technical outreach, partnerships and program leadership",
+    "SAP ERP, process analysis and user support"
+  ]
+}

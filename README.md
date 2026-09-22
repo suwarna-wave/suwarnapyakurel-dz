@@ -1,81 +1,37 @@
-# Suwarna Pyakurel Portfolio
+# Suwarna Pyakurel — portfolio
 
-Personal portfolio for Suwarna Pyakurel, built with Next.js, TypeScript, Tailwind CSS, shadcn/ui-style components, and lucide-react icons.
+Next.js App Router, React, TypeScript and Tailwind CSS; statically exported to GitHub Pages at https://suwarnapyakurel.com.np/.
 
-Production domain: https://suwarnapyakurel.com.np/
+**Start with the [master documentation index](docs/README.md).** It maps every section, source, asset and redesign constraint.
 
-## Tech Stack
+## Local development
 
-- Next.js 14 App Router
-- React 18
-- TypeScript
-- Tailwind CSS
-- Radix UI primitives
-- lucide-react icons
-- GitHub Pages static export
+The repository pins pnpm 9.15.9; CI uses Node 24. Install dependencies with `pnpm install --frozen-lockfile`, then run `pnpm dev`. With dependencies already installed, the equivalent `npm run dev` also works. Do not introduce a second lockfile.
 
-## Run Locally
+## Content workflow
 
-Install Node.js 20 or newer, then run:
+1. Review the [source policy](docs/source-policy.md) and supplied resume.
+2. Edit the relevant `content/*.json` records, independently of the UI.
+3. Run `npm run docs:sync` to refresh the Markdown section references.
+4. Run `npm run check` to verify documentation, production build and static export.
 
-```bash
-corepack enable
-pnpm install
-pnpm dev
-```
+The existing `/Suwarna_Pyakurel_CV.pdf` download URL serves the updated resume. Its original filename and SHA-256 fingerprint are tracked in `content/sources.json`.
 
-Open `http://localhost:3000`.
-
-## Production Export Check
-
-```bash
-pnpm build
-pnpm dlx serve out
-```
-
-Open the local URL printed by `serve`.
-
-Before pushing, check:
-
-- Home page renders correctly.
-- Header navigation scrolls to each section.
-- CV download opens `public/Suwarna_Pyakurel_CV.pdf`.
-- External links open correctly.
-- Contact form opens the email client.
-- The 404 page works after static export.
-
-## Deployment
-
-This site deploys to GitHub Pages through `.github/workflows/deploy.yml`.
-
-The workflow:
-
-1. Installs dependencies with pnpm 9 and the lockfile.
-2. Runs `pnpm build`.
-3. Uploads the generated `out` directory as a GitHub Pages artifact.
-4. Deploys it to GitHub Pages.
-
-GitHub repository settings should use:
-
-- Pages source: GitHub Actions
-- Custom domain: `suwarnapyakurel.com.np`
-- HTTPS: enforced when available
-
-## Useful Commands
-
-```bash
-pnpm dev
-pnpm build
-pnpm preview
-pnpm lint
-```
-
-## Project Structure
+## Structure
 
 ```text
-app/                 Next.js routes, layout, and global styles
-components/          Portfolio sections and shared UI components
-lib/                 Utility helpers
-public/              Static assets, CNAME, icons, CV, and 404 page
-.github/workflows/   GitHub Pages deployment workflow
+app/                   Routes, metadata and global styles
+components/            Section rendering and interactions
+components/ui/         Shared UI primitives
+content/               UI-independent portfolio records (JSON)
+lib/                   Utilities and derived structured data
+public/                Published assets, resume and hosting files
+docs/README.md         Master navigation document
+docs/sections/         Generated, readable references for each content file
+docs/sources/          Complete supplied-resume transcription
+docs/legacy/           Retained old HTML references; not deployed
+scripts/               Documentation synchronization and export checks
+.github/workflows/     Build and deployment automation
 ```
+
+See [architecture](docs/architecture.md), [redesign brief](docs/redesign.md), [audit](docs/audit-2026-09-23.md) and [deployment](docs/deployment.md).

@@ -33,8 +33,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Build with Next.js
-        run: pnpm build
+      - name: Validate content, build and check static export
+        run: pnpm check
       - name: Copy CNAME to out directory
         run: cp ./public/CNAME ./out/
       - name: Upload artifact

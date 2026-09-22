@@ -2,23 +2,13 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download, ArrowRight } from "lucide-react"
+import { Download, ArrowRight } from "lucide-react"
 import { getAssetPath } from "@/lib/utils"
 
-const socialLinks = [
-  { name: "GitHub", href: "https://github.com/suwarna-wave", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com/in/suwarnapyakurel", icon: Linkedin },
-  { name: "Email", href: "mailto:suwarnapyakurel5@gmail.com", icon: Mail },
-]
-
-const focusAreas = [
-  "SAP Consulting",
-  "Strategic PR",
-  "Outreach Management",
-  "Scientific ML",
-  "Robotics & IoT",
-  "Go · Exploring",
-]
+import profile from "@/content/profile.json"
+import { resolveContentIcon } from "@/components/content-icons"
+const socialLinks = profile.socialLinks.map((item) => ({ ...item, icon: resolveContentIcon(item.icon) }))
+const focusAreas = profile.focusAreas
 
 export function HeroSection() {
   const scrollToSection = (href: string) => {
@@ -38,17 +28,16 @@ export function HeroSection() {
           <div className="relative z-10 max-w-2xl lg:max-w-[29rem] lg:-translate-x-4 xl:-translate-x-6">
             <p className="mono-label text-muted-foreground">Hello, I am</p>
             <h1 className="mt-8 text-5xl font-black leading-[0.94] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-7xl">
-              Suwarna
+              {profile.firstName}
               <br />
-              Pyakurel.
+              {profile.lastName}.
             </h1>
             <p className="mt-5 text-lg font-semibold text-muted-foreground sm:text-xl">
-              SAP Consultant · Strategic PR & Outreach Lead
-              <span className="mt-1 block">Scientific ML · Robotics</span>
+              {profile.headline}
+              <span className="mt-1 block">{profile.specialization}</span>
             </p>
             <p className="mt-6 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
-              SAP consultant and engineering undergraduate with 2.5+ years of experience leading strategic PR,
-              outreach, partnerships, and stakeholder communication for technology, education, and research initiatives.
+              {profile.summary}
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -59,10 +48,12 @@ export function HeroSection() {
               <Button
                 variant="outline"
                 className="h-11 rounded-lg bg-transparent px-6"
-                onClick={() => window.open(getAssetPath("/Suwarna_Pyakurel_CV.pdf"), "_blank")}
+                asChild
               >
-                <Download className="mr-2 h-4 w-4" />
-                Download CV
+                <a href={getAssetPath(profile.resumePath)} download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Download CV
+                </a>
               </Button>
             </div>
 
@@ -85,15 +76,15 @@ export function HeroSection() {
           <div className="relative z-10 -mx-5 bg-black px-5 py-14 text-white sm:-mx-8 sm:px-8 lg:mx-0 lg:bg-transparent lg:p-0">
             <div className="mx-auto max-w-md">
               <div className="mb-4 flex items-end justify-between border-b border-white/20 pb-3">
-                <span className="mono-label text-white/50">Consulting · Strategy · Engineering</span>
+                <span className="mono-label text-white/50">Applied AI · Software · Leadership</span>
                 <span className="font-mono text-xs text-white/50">NP</span>
               </div>
 
               <div className="group overflow-hidden rounded-xl border border-white/15 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:shadow-[0_24px_60px_-28px_rgba(255,255,255,0.22)]">
                 <div className="relative overflow-hidden">
                   <Image
-                    src={getAssetPath("/suwarna-pyakurel.png")}
-                    alt="Suwarna Pyakurel at ICRTAI"
+                    src={getAssetPath(profile.portrait)}
+                    alt={profile.portraitAlt}
                     width={747}
                     height={1024}
                     priority

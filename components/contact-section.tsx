@@ -6,35 +6,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle } from "lucide-react"
+import { Github, Linkedin, Send, CheckCircle } from "lucide-react"
 
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "suwarnapyakurel5@gmail.com",
-    href: "mailto:suwarnapyakurel5@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+977-9840036060",
-    href: "tel:+9779840036060",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Biratnagar, Nepal",
-    href: "https://maps.google.com/?q=Biratnagar,Nepal",
-  },
-]
-
-const availability = [
-  "SAP consulting and implementation assistance",
-  "Strategic PR, outreach, and stakeholder management",
-  "Research collaborations in ML and signal analysis",
-  "Robotics, IoT, and engineering projects",
-]
+import profile from "@/content/profile.json"
+import contact from "@/content/contact.json"
+import { resolveContentIcon } from "@/components/content-icons"
+const contactInfo = contact.items.map((item) => ({ ...item, icon: resolveContentIcon(item.icon) }))
+const availability = contact.availability
 
 export function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" })
@@ -52,7 +30,7 @@ export function ContactSection() {
 
     const subject = encodeURIComponent(formData.subject)
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
-    window.location.href = `mailto:suwarnapyakurel5@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
 
     setIsSubmitting(false)
     setIsSubmitted(true)
@@ -109,13 +87,13 @@ export function ContactSection() {
 
             <div className="flex gap-2">
               <Button variant="outline" size="icon" asChild>
-                <a href="https://github.com/suwarna-wave" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href={profile.socialLinks[0].href} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="h-4 w-4" />
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild>
                 <a
-                  href="https://linkedin.com/in/suwarnapyakurel"
+                  href={profile.socialLinks[1].href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -131,8 +109,8 @@ export function ContactSection() {
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <CheckCircle className="h-10 w-10 text-primary mx-auto mb-3" />
-                  <h4 className="font-medium mb-1">Email client opened</h4>
-                  <p className="text-sm text-muted-foreground">Thank you for reaching out. I typically respond within 48 hours.</p>
+                  <h4 className="font-medium mb-1">Continue in your email app</h4>
+                  <p className="text-sm text-muted-foreground">Send the prepared message from your email app. If it did not open, use the email link on this page.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">

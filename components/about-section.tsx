@@ -1,89 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Award, Lightbulb, Telescope, Users, BrainCircuit, Bot, Building2 } from "lucide-react"
 
-const skillGroups = [
-  {
-    category: "Consulting & Enterprise",
-    skills: ["SAP ERP", "Process Analysis", "Requirements Gathering", "User Support", "Technical Documentation"],
-  },
-  {
-    category: "Strategy & Management",
-    skills: ["Strategic PR", "Outreach Management", "Partnerships", "Stakeholder Communication", "Event Operations"],
-  },
-  {
-    category: "Engineering & Research",
-    skills: [
-      "Python",
-      "C/C++",
-      "Scientific ML",
-      "Deep Learning",
-      "Explainable AI",
-      "Medical Imaging",
-      "Signal Processing",
-      "FFT Analysis",
-      "Robotics",
-      "IoT",
-      "Embedded Systems",
-      "Arduino",
-      "Linux",
-      "Git",
-      "Go (exploring)",
-    ],
-  },
-]
-
-const directions = [
-  {
-    icon: Building2,
-    title: "SAP Consulting",
-    description: "Translating operational requirements into practical ERP configuration, support, and adoption.",
-  },
-  {
-    icon: Users,
-    title: "Strategic PR & Outreach",
-    description: "2.5+ years leading communications, partnerships, engagement, and program visibility.",
-  },
-  {
-    icon: BrainCircuit,
-    title: "Scientific ML",
-    description: "Current research in interpretable medical imaging and engineering signal analysis.",
-  },
-  {
-    icon: Bot,
-    title: "Engineering Practice",
-    description: "Robotics, IoT, embedded systems, and an active exploration of Go.",
-  },
-]
-
-const achievements = [
-  {
-    icon: Award,
-    title: "Yantra 9.0 — Business Cup Expo Winner",
-    description:
-      "Led Team ERC's winning Business Cup Expo entry with IoT Based Smart Agriculture, a sensor-driven farming system designed for Nepal's diverse landscape. Awarded at Yantra 9.0, an international robotics competition and technology festival organized by the Robotics Association of Nepal. Team ERC also won the Swarmanoid title.",
-    year: "2024",
-    sourceUrl: "https://robotics.ioepc.edu.np/blog/achievements/yantra9/",
-  },
-  {
-    icon: Lightbulb,
-    title: "Best Idea — X-hack 3.0",
-    description: "Recognized at Nepal's largest hardware hackathon for an innovative project concept.",
-    year: "2024",
-  },
-  {
-    icon: Telescope,
-    title: "Asteroid Discovery",
-    description: 'Provisional discovery of main belt asteroid "2020WX9" as a certified asteroid hunter.',
-    year: "2020",
-  },
-  {
-    icon: Users,
-    title: "IOAA-Jr. 2024 Leadership",
-    description: "Country Guide and Tech Lead for Nepal's first International Olympiad on Astronomy and Astrophysics Junior.",
-    year: "2024",
-  },
-]
+import profile from "@/content/profile.json"
+import skillGroups from "@/content/skills.json"
+import directionData from "@/content/directions.json"
+import awardData from "@/content/awards.json"
+import { resolveContentIcon } from "@/components/content-icons"
+const directions = directionData.map((item) => ({ ...item, icon: resolveContentIcon(item.icon) }))
+const achievements = awardData.map((item) => ({ ...item, icon: resolveContentIcon(item.icon) }))
 
 export function AboutSection() {
   return (
@@ -93,27 +17,16 @@ export function AboutSection() {
           <p className="section-kicker">01 / Profile</p>
           <h2 className="section-heading">About</h2>
           <p className="section-subheading">
-            SAP consulting and strategic communications, grounded in engineering and research.
+            Applied AI, software and technical leadership, grounded in hands-on engineering.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="lg:col-span-3 space-y-6">
             <div className="space-y-4 leading-relaxed text-muted-foreground">
-              <p className="text-foreground/90">
-                I am an SAP consultant and Electronics, Communication & Information Engineering undergraduate who works
-                at the intersection of enterprise systems, technical programs, and stakeholder management.
-              </p>
-              <p>
-                I bring 2.5+ years of experience in strategic PR and outreach management across technology, education,
-                and research initiatives. My work includes campaign planning, partnership development, institutional
-                communication, program visibility, event operations, and engagement with diverse stakeholders.
-              </p>
-              <p>
-                My consulting approach is strengthened by hands-on engineering: robotics and IoT projects, current
-                research in Scientific ML, and an active exploration of Go. This technical foundation helps me manage
-                programs and communicate between operational, technical, and leadership teams without losing context.
-              </p>
+              {profile.about.map((paragraph, index) => (
+                <p key={paragraph} className={index === 0 ? "text-foreground/90" : undefined}>{paragraph}</p>
+              ))}
             </div>
 
             <div>
@@ -139,20 +52,20 @@ export function AboutSection() {
             <CardContent className="p-6 space-y-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.16em] text-primary">Available for</p>
-                <h3 className="mt-1 font-medium text-foreground">Consulting, strategy, and technical leadership</h3>
+                <h3 className="mt-1 font-medium text-foreground">Applied AI, software, and technical collaboration</h3>
               </div>
               <dl className="space-y-3 text-sm">
                 <div>
                   <dt className="text-muted-foreground">Location</dt>
-                  <dd className="text-foreground mt-0.5">Biratnagar, Koshi Province, Nepal</dd>
+                  <dd className="text-foreground mt-0.5">{profile.location}</dd>
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Email</dt>
-                  <dd className="text-foreground mt-0.5">suwarnapyakurel5@gmail.com</dd>
+                  <dd className="text-foreground mt-0.5">{profile.email}</dd>
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Phone</dt>
-                  <dd className="text-foreground mt-0.5">+977-9840036060</dd>
+                  <dd className="text-foreground mt-0.5">{profile.phone}</dd>
                 </div>
               </dl>
             </CardContent>

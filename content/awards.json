@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "Award",
+    "title": "Yantra 9.0 — Business Cup Expo Winner",
+    "description": "Co-developed an IoT-based smart agriculture prototype in a four-member team and led Team ERC's winning Business Cup Expo presentation at Yantra 9.0, an international robotics competition organized by the Robotics Association of Nepal. Team ERC won both the Business Cup Expo and Swarmanoid titles.",
+    "year": "2024",
+    "sourceUrl": "https://robotics.ioepc.edu.np/blog/achievements/yantra9/"
+  },
+  {
+    "icon": "Lightbulb",
+    "title": "X-Hack — Best Idea Presentation Award",
+    "description": "Recognized for an innovative project concept at a hardware hackathon in Nepal.",
+    "year": ""
+  },
+  {
+    "icon": "Telescope",
+    "title": "Main-belt Asteroid 2020 WX9",
+    "description": "Received a provisional-discovery certificate through an asteroid-search campaign.",
+    "year": ""
+  },
+  {
+    "icon": "Users",
+    "title": "IOAA-Jr. 2024 Leadership",
+    "description": "Served as Country Guide and Tech Lead for IOAA-Jr. 2024, supporting international participant coordination, event logistics and technical operations.",
+    "year": "2024"
+  }
+]

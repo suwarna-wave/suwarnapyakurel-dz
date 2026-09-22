@@ -1,20 +1,12 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, ArrowUp } from "lucide-react"
+import { ArrowUp } from "lucide-react"
 
-const quickLinks = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-]
-
-const socialLinks = [
-  { name: "GitHub", href: "https://github.com/suwarna-wave", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com/in/suwarnapyakurel", icon: Linkedin },
-  { name: "Email", href: "mailto:suwarnapyakurel5@gmail.com", icon: Mail },
-]
+import quickLinks from "@/content/navigation.json"
+import profile from "@/content/profile.json"
+import { resolveContentIcon } from "@/components/content-icons"
+const socialLinks = profile.socialLinks.map((item) => ({ ...item, icon: resolveContentIcon(item.icon) }))
 
 export function Footer() {
   const scrollToSection = (href: string) => {
@@ -29,7 +21,7 @@ export function Footer() {
           <div>
             <p className="font-medium text-white">Suwarna Pyakurel</p>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/50">
-              SAP consultant and strategic PR & outreach lead, grounded in engineering and research.
+              {profile.footerSummary}
             </p>
             <div className="flex items-center gap-2 mt-4">
               {socialLinks.map((link) => (
@@ -61,9 +53,9 @@ export function Footer() {
           <div>
             <p className="text-sm font-medium mb-3">Contact</p>
             <div className="space-y-1 text-sm text-white/50">
-              <p>Biratnagar, Nepal</p>
-              <p>suwarnapyakurel5@gmail.com</p>
-              <p>+977-9840036060</p>
+              <p>{profile.location}</p>
+              <p>{profile.email}</p>
+              <p>{profile.phone}</p>
             </div>
           </div>
         </div>

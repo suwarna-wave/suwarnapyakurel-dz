@@ -1,0 +1,72 @@
+{
+  "name": "Suwarna Pyakurel",
+  "firstName": "Suwarna",
+  "lastName": "Pyakurel",
+  "headline": "Engineering Undergraduate",
+  "specialization": "Applied AI, Software & Technical Leadership",
+  "summary": "Electronics, Communication and Information Engineering undergraduate with projects in explainable deep learning, signal processing, IoT and software systems. Co-founder of Curio Tech, combining hands-on engineering with operations, institutional partnerships and technical outreach.",
+  "about": [
+    "I am an Electronics, Communication and Information Engineering undergraduate at Tribhuvan University, IOE Purwanchal Campus, with projects in explainable deep learning, signal processing, IoT and software systems.",
+    "As Co-founder and COO of Curio Tech, I combine hands-on engineering with operations, institutional partnerships and technical outreach. My community roles support student learning, research engagement and international STEM programs.",
+    "My work spans chest X-ray research, vibration-based fault detection, smart agriculture and event technology. I independently designed and deployed QR tracking for IOAA-Jr. 2024, supporting 200+ participants, delegates, organizers and personnel, including delegates from 19 countries."
+  ],
+  "footerSummary": "Engineering undergraduate and Curio Tech co-founder working across applied AI, software and technical leadership.",
+  "location": "Biratnagar, Koshi Province, Nepal",
+  "email": "suwarnapyakurel5@gmail.com",
+  "phone": "+977-9840036060",
+  "telephone": "+9779840036060",
+  "siteUrl": "https://suwarnapyakurel.com.np",
+  "siteTitle": "Suwarna Pyakurel — Applied AI, Software & Technical Leadership",
+  "portrait": "/suwarna-pyakurel.png",
+  "portraitAlt": "Suwarna Pyakurel at ICRTAI",
+  "resumePath": "/Suwarna_Pyakurel_CV.pdf",
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "href": "https://github.com/suwarna-wave",
+      "icon": "Github"
+    },
+    {
+      "name": "LinkedIn",
+      "href": "https://linkedin.com/in/suwarnapyakurel",
+      "icon": "Linkedin"
+    },
+    {
+      "name": "Email",
+      "href": "mailto:suwarnapyakurel5@gmail.com",
+      "icon": "Mail"
+    }
+  ],
+  "focusAreas": [
+    "Explainable AI",
+    "Signal Processing",
+    "Software Systems",
+    "Technical Leadership",
+    "Robotics & IoT",
+    "Scientific ML"
+  ],
+  "researchInterests": [
+    "Explainable AI",
+    "Medical AI",
+    "Scientific machine learning",
+    "Signal processing",
+    "Predictive maintenance",
+    "IoT and embedded intelligence",
+    "Data-driven systems",
+    "Robotics"
+  ],
+  "languages": [
+    {
+      "name": "Nepali",
+      "proficiency": "Native"
+    },
+    {
+      "name": "English",
+      "proficiency": "Highly proficient"
+    },
+    {
+      "name": "Hindi",
+      "proficiency": "Highly proficient"
+    }
+  ]
+}

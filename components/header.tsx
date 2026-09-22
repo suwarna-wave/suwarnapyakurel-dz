@@ -5,12 +5,7 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Menu, Moon, SlidersHorizontal, Sun, X } from "lucide-react"
 
-const navItems = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-]
+import navItems from "@/content/navigation.json"
 
 type ThemeMode = "normal" | "dark"
 
@@ -74,8 +69,8 @@ export function Header() {
 
   useEffect(() => {
     const savedMode = window.localStorage.getItem("portfolio-theme") === "dark" ? "dark" : "normal"
-    const savedIntensity = Number(window.localStorage.getItem("portfolio-intensity"))
-    const nextIntensity = Number.isFinite(savedIntensity) && savedIntensity >= 0 ? savedIntensity : 80
+    const savedIntensity = Number(window.localStorage.getItem("portfolio-intensity") ?? 80)
+    const nextIntensity = Number.isFinite(savedIntensity) && savedIntensity >= 0 && savedIntensity <= 100 ? savedIntensity : 80
 
     setThemeMode(savedMode)
     setIntensity(nextIntensity)
@@ -86,7 +81,7 @@ export function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 16)
 
-      const sections = ["hero", "about", "experience", "projects", "contact"]
+      const sections = ["hero", ...navItems.map((item) => item.href.slice(1))]
       const scrollPosition = window.scrollY + 120
 
       for (const section of sections) {
@@ -197,6 +192,7 @@ export function Header() {
               className="rounded-lg border border-border bg-background md:hidden"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>

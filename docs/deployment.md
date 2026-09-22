@@ -19,7 +19,7 @@ Open `http://localhost:3000`.
 Before pushing, run:
 
 ```bash
-pnpm build
+pnpm check
 pnpm dlx serve out
 ```
 
@@ -51,3 +51,5 @@ The site is published from the generated `out` folder. The `public/CNAME` file i
 - If the site shows an old version, check the Actions tab for the latest `Deploy to GitHub Pages` run.
 - If the custom domain does not work, confirm DNS records point to GitHub Pages and allow DNS propagation time.
 - If assets are missing, make sure `next.config.mjs` still has `output: 'export'`, root `basePath`, and `images.unoptimized`.
+
+The build job now runs `pnpm check`: content/reference validation, Next production build and static-export checks must pass before upload.
