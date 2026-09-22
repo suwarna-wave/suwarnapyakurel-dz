@@ -17,6 +17,7 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 - Overseeing operational execution, PR and outreach initiatives, and financial coordination
 - Building institutional collaborations and strengthening the startup's digital presence
 - Supporting project scaling across Nepal's evolving technology ecosystem
+- **Organization Url:** https://www.curiotechglobal.com/
 
 ## Outreach Coordinator
 
@@ -31,6 +32,7 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 - Media relations and strategic communications for AI education
 - Community building for research-driven initiatives
 - Bridging conference outreach with scientific collaboration
+- **Organization Url:** https://www.icrtai.com/
 
 ## Advisor & DataCamp Maintainer
 
@@ -45,6 +47,7 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 - PR & Outreach Lead, Jul 2025 to Feb 2026, for society visibility, communications, and student engagement
 - Advising student-led technical programs and community initiatives
 - Maintaining DataCamp learning access and coordination
+- **Organization Url:** https://excess.ioepc.edu.np/
 
 ## PR & Outreach Lead
 
@@ -58,6 +61,7 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 
 - AI learning sessions and workshops
 - Event planning and student engagement
+- **Organization Url:** https://cs50xnepal.ioepc.edu.np/local_team
 
 ## Undergraduate Student Member
 
@@ -72,6 +76,11 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 - International participant coordination, event logistics and technical operations at IOAA-Jr. 2024
 - NASA Space Apps Challenge activities
 - Scientific education initiatives with Biratnagar and Koshi Province stakeholders
+
+### Related Link
+
+- **Label:** IOAA-Jr. 2024 event website
+- **Href:** https://ioaajr2024.org/
 
 ## Member
 

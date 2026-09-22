@@ -28,7 +28,7 @@
     },
     {
       "name": "LinkedIn",
-      "href": "https://linkedin.com/in/suwarnapyakurel",
+      "href": "https://www.linkedin.com/in/suwarnapyakurel/",
       "icon": "Linkedin"
     },
     {
@@ -68,5 +68,6 @@
       "name": "Hindi",
       "proficiency": "Highly proficient"
     }
-  ]
+  ],
+  "portfolioUrl": "https://www.suwarnapyakurel.com.np"
 }

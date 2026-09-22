@@ -9,7 +9,8 @@
       "Overseeing operational execution, PR and outreach initiatives, and financial coordination",
       "Building institutional collaborations and strengthening the startup's digital presence",
       "Supporting project scaling across Nepal's evolving technology ecosystem"
-    ]
+    ],
+    "organizationUrl": "https://www.curiotechglobal.com/"
   },
   {
     "title": "Outreach Coordinator",
@@ -21,7 +22,8 @@
       "Media relations and strategic communications for AI education",
       "Community building for research-driven initiatives",
       "Bridging conference outreach with scientific collaboration"
-    ]
+    ],
+    "organizationUrl": "https://www.icrtai.com/"
   },
   {
     "title": "Advisor & DataCamp Maintainer",
@@ -33,7 +35,8 @@
       "PR & Outreach Lead, Jul 2025 to Feb 2026, for society visibility, communications, and student engagement",
       "Advising student-led technical programs and community initiatives",
       "Maintaining DataCamp learning access and coordination"
-    ]
+    ],
+    "organizationUrl": "https://excess.ioepc.edu.np/"
   },
   {
     "title": "PR & Outreach Lead",
@@ -44,7 +47,8 @@
     "highlights": [
       "AI learning sessions and workshops",
       "Event planning and student engagement"
-    ]
+    ],
+    "organizationUrl": "https://cs50xnepal.ioepc.edu.np/local_team"
   },
   {
     "title": "Undergraduate Student Member",
@@ -56,7 +60,11 @@
       "International participant coordination, event logistics and technical operations at IOAA-Jr. 2024",
       "NASA Space Apps Challenge activities",
       "Scientific education initiatives with Biratnagar and Koshi Province stakeholders"
-    ]
+    ],
+    "relatedLink": {
+      "label": "IOAA-Jr. 2024 event website",
+      "href": "https://ioaajr2024.org/"
+    }
   },
   {
     "title": "Member",

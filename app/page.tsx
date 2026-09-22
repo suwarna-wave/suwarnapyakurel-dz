@@ -17,11 +17,11 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
       <Header />
-      <main>
+      <main id="main" tabIndex={-1}>
         <HeroSection />
+        <ProjectsSection />
         <AboutSection />
         <ExperienceSection />
-        <ProjectsSection />
         <ContactSection />
         <Footer />
       </main>

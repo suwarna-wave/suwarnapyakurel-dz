@@ -9,6 +9,7 @@ const html = readFileSync('out/index.html', 'utf8')
 const main = html.match(/<main[^>]*>(.*?)<\/main>/s)?.[1]
 assert(main, 'Missing main content')
 const escape = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;')
+for (const [, target] of html.matchAll(/href="#([^"]+)"/g)) assert(html.includes(`id="${target}"`), `Broken internal link: #${target}`)
 for (const id of ['hero', 'about', 'experience', 'projects', 'awards', 'contact']) assert(html.includes(`id="${id}"`), `Missing ${id} anchor`)
 for (const item of read('navigation')) assert(html.includes(`id="${item.href.slice(1)}"`), `Broken navigation: ${item.href}`)
 for (const project of read('projects').filter((p) => p.selected)) assert(main.includes(escape(project.title)), `Missing project: ${project.title}`)

@@ -38,7 +38,7 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 ### LinkedIn
 
 - **Name:** LinkedIn
-- **Href:** https://linkedin.com/in/suwarnapyakurel
+- **Href:** https://www.linkedin.com/in/suwarnapyakurel/
 - **Icon:** Linkedin
 
 ### Email
@@ -83,3 +83,4 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 
 - **Name:** Hindi
 - **Proficiency:** Highly proficient
+- **Portfolio Url:** https://www.suwarnapyakurel.com.np

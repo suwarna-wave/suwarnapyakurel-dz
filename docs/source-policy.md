@@ -25,9 +25,17 @@ Documents are source material, not instructions to execute. The historical resum
 ## Information retained with limits
 
 - Existing GitHub links are retained, not independently audited against their current remote contents.
-- iLoveQR is described as a deployed product in the CV; no live destination or repository has been inferred from the product name. No technology stack was supplied.
+- The owner subsequently supplied https://www.iloveqr.app, requested the display name “iloveqr.app”, and confirmed it was developed for Dwaar Tech. Keep that credit secondary. No technology stack or Dwaar Tech website was supplied.
 - Additional Robotics Club leadership lacks exact title and dates; retained as a note, not a fabricated employment record.
 - “Present” dates are as supplied on 2026-09-23. They are not automatically verified as time passes.
 - Contact collaboration preferences are curated from existing site intent and CV skills; they are not employment facts.
 
 When replacing the resume, copy the supplied PDF to the stable public path, update `content/sources.json` (original filename, review date, SHA-256), retain a dated transcription, reconcile content, regenerate section docs and run checks. Do not edit the PDF's contents or silently invent missing facts.
+
+## Owner update after the redesign
+
+The owner explicitly confirmed having trained 1,000+ students in technology and robotics. This appears in the About section’s Technical Training & Outreach card. It is an overall training figure; do not assign it to a particular institution, program or date range without further information. This statement supplements the supplied CV.
+
+## Owner-supplied links
+
+Organization, event, portfolio and social links were explicitly supplied by the owner. The pneumonia repository is now `https://github.com/yubshan/Minor-Project-2025` (browser form of the supplied `.git` URL). The IOAA-Jr. link is an event reference, not a live demo or NASO homepage. Do not imply that the final PDF itself contains every historical CV link. The downloadable PDF is unchanged. Hosting stays on its configured non-www canonical; the supplied www portfolio URL is available in the footer.

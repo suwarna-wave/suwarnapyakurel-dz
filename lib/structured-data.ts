@@ -39,6 +39,7 @@ export const structuredData = {
         item: {
           "@type": project.github ? "SoftwareSourceCode" : "CreativeWork",
           name: project.title, description: project.description,
+          ...(project.website ? { url: project.website } : {}),
           ...(project.github ? { codeRepository: project.github } : {}), author: person,
         },
       })),

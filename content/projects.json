@@ -20,7 +20,7 @@
     ],
     "icon": "Activity",
     "featured": true,
-    "github": "https://github.com/suwarna-wave/Minor-Project-Pneumonia",
+    "github": "https://github.com/yubshan/Minor-Project-2025",
     "selected": true
   },
   {
@@ -62,10 +62,12 @@
       "Managed deployment, on-site support, monitoring and troubleshooting"
     ],
     "icon": "QrCode",
-    "selected": true
+    "selected": true,
+    "referenceUrl": "https://ioaajr2024.org/",
+    "referenceLabel": "IOAA-Jr. 2024 event website"
   },
   {
-    "title": "iLoveQR.app — QR Generation & Design Platform",
+    "title": "iloveqr.app",
     "description": "Co-developed a deployed QR generation and design web application in a four-member team.",
     "period": "Deployed product",
     "category": "Web Application",
@@ -76,7 +78,9 @@
       "Live previews and PNG/SVG/JPEG/PDF export at resolutions up to 2048 px"
     ],
     "icon": "QrCode",
-    "selected": true
+    "selected": true,
+    "website": "https://www.iloveqr.app",
+    "credit": "Developed for Dwaar Tech"
   },
   {
     "title": "Markdown PDF Studio",

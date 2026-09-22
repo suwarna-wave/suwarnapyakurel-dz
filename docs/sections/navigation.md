@@ -4,6 +4,11 @@
 
 Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate; do not edit this snapshot independently. Factual basis and unresolved details: [source policy](../source-policy.md).
 
+## Projects
+
+- **Name:** Projects
+- **Href:** #projects
+
 ## About
 
 - **Name:** About
@@ -13,11 +18,6 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 
 - **Name:** Experience
 - **Href:** #experience
-
-## Projects
-
-- **Name:** Projects
-- **Href:** #projects
 
 ## Contact
 

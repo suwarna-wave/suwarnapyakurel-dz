@@ -1,119 +1,95 @@
-"use client"
-
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Download, ArrowRight } from "lucide-react"
-import { getAssetPath } from "@/lib/utils"
-
+import { ArrowDown, ArrowUpRight, Download, MapPin } from "lucide-react"
 import profile from "@/content/profile.json"
+import landing from "@/content/landing.json"
+import projectData from "@/content/projects.json"
 import { resolveContentIcon } from "@/components/content-icons"
-const socialLinks = profile.socialLinks.map((item) => ({ ...item, icon: resolveContentIcon(item.icon) }))
-const focusAreas = profile.focusAreas
+import { getAssetPath, getProjectAnchor } from "@/lib/utils"
+
+const previewProjects = projectData.filter((project) => project.selected).slice(0, 3)
 
 export function HeroSection() {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) element.scrollIntoView({ behavior: "smooth" })
-  }
-
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden pt-16">
-      <div
-        className="absolute inset-y-0 right-0 hidden w-[56%] bg-black lg:block"
-        style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%)" }}
-      />
-
-      <div className="section-container relative flex min-h-[calc(100vh-4rem)] items-center py-14 lg:items-start lg:pb-6 lg:pt-5">
-        <div className="grid w-full items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:gap-16">
-          <div className="relative z-10 max-w-2xl lg:max-w-[29rem] lg:-translate-x-4 xl:-translate-x-6">
-            <p className="mono-label text-muted-foreground">Hello, I am</p>
-            <h1 className="mt-8 text-5xl font-black leading-[0.94] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-7xl">
-              {profile.firstName}
-              <br />
-              {profile.lastName}.
+    <section id="hero" className="hero-section relative overflow-hidden">
+      <div className="section-container">
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="section-kicker flex items-center gap-3">
+              <span className="h-2 w-2 rounded-full bg-primary" aria-hidden="true" />
+              {landing.eyebrow}
+            </p>
+            <h1 className="hero-name">
+              {profile.firstName}<br />
+              <span>{profile.lastName}.</span>
             </h1>
-            <p className="mt-5 text-lg font-semibold text-muted-foreground sm:text-xl">
-              {profile.headline}
-              <span className="mt-1 block">{profile.specialization}</span>
-            </p>
-            <p className="mt-6 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
-              {profile.summary}
-            </p>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button onClick={() => scrollToSection("#projects")} className="h-11 rounded-lg px-6">
-                Explore my work
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                variant="outline"
-                className="h-11 rounded-lg bg-transparent px-6"
-                asChild
-              >
-                <a href={getAssetPath(profile.resumePath)} download>
-                  <Download className="mr-2 h-4 w-4" />
-                  Download CV
-                </a>
-              </Button>
+            <p className="mt-7 text-sm font-medium tracking-wide text-foreground sm:text-base">{profile.specialization}</p>
+            <p className="mt-4 max-w-lg text-base leading-8 text-muted-foreground sm:text-lg">{landing.introduction}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <a href="#projects" className="hero-primary-link">
+                Explore my work <ArrowUpRight className="h-4 w-4" />
+              </a>
+              <a href={getAssetPath(profile.resumePath)} download className="hero-secondary-link">
+                <Download className="h-4 w-4" /> Download CV
+              </a>
             </div>
-
-            <div className="mt-10 flex items-center gap-3">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.name}
-                  className="grid h-10 w-10 place-items-center rounded-lg border border-border bg-secondary text-foreground shadow-[3px_3px_0_#111] transition-all duration-200 hover:-translate-y-1 hover:bg-accent"
-                >
-                  <link.icon className="h-4 w-4" />
-                </a>
-              ))}
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <span className="flex items-center gap-2 text-xs text-muted-foreground"><MapPin className="h-3.5 w-3.5" /> {profile.location}</span>
+              <div className="flex items-center gap-1">
+                {profile.socialLinks.map((link) => {
+                  const Icon = resolveContentIcon(link.icon)
+                  return (
+                    <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}
+                      className="grid h-10 w-10 place-items-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-primary">
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  )
+                })}
+              </div>
             </div>
           </div>
 
-          <div className="relative z-10 -mx-5 bg-black px-5 py-14 text-white sm:-mx-8 sm:px-8 lg:mx-0 lg:bg-transparent lg:p-0">
-            <div className="mx-auto max-w-md">
-              <div className="mb-4 flex items-end justify-between border-b border-white/20 pb-3">
-                <span className="mono-label text-white/50">Applied AI · Software · Leadership</span>
-                <span className="font-mono text-xs text-white/50">NP</span>
+          <div className="hero-portrait-area">
+            <div className="portrait-orbit" aria-hidden="true" />
+            <figure className="portrait-frame">
+              <div className="relative aspect-[4/4.5] overflow-hidden rounded-[1.1rem] bg-secondary">
+                <Image src={getAssetPath(profile.portrait)} alt={profile.portraitAlt} width={747} height={1024} priority
+                  sizes="(max-width: 767px) 82vw, (max-width: 1023px) 38vw, 360px"
+                  className="h-full w-full object-cover object-[center_25%]" />
+                <span className="portrait-index" aria-hidden="true">SP / 01</span>
               </div>
+              <figcaption className="flex items-center justify-between gap-4 px-2 pb-1 pt-5">
+                <div>
+                  <p className="text-sm font-semibold">{profile.name}</p>
+                  <p className="mt-1 text-[0.65rem] uppercase tracking-[0.13em] text-muted-foreground">{profile.headline}</p>
+                </div>
+                <span className="text-3xl text-primary" aria-hidden="true">✳</span>
+              </figcaption>
+            </figure>
+            <p className="portrait-note">{landing.portraitCaption}</p>
+          </div>
+        </div>
 
-              <div className="group overflow-hidden rounded-xl border border-white/15 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:shadow-[0_24px_60px_-28px_rgba(255,255,255,0.22)]">
-                <div className="relative overflow-hidden">
-                  <Image
-                    src={getAssetPath(profile.portrait)}
-                    alt={profile.portraitAlt}
-                    width={747}
-                    height={1024}
-                    priority
-                    className="h-[430px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.025] sm:h-[500px] lg:h-[clamp(220px,42vh,390px)]"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent px-5 pb-5 pt-20">
-                    <p className="text-xl font-bold tracking-[-0.025em]">Strategy backed by technical understanding.</p>
-                    <p className="mt-2 max-w-sm text-xs leading-5 text-white/65">
-                      Managing people, partnerships, and communication while staying close to engineering and research.
-                    </p>
+        <div className="hero-work-strip">
+          <div className="mb-5 flex items-center justify-between gap-4">
+            <p className="mono-label text-muted-foreground">{landing.workLabel}</p>
+            <a href="#projects" className="flex items-center gap-2 text-xs font-medium text-primary">Selected work <ArrowDown className="h-3.5 w-3.5" /></a>
+          </div>
+          <div className="grid gap-3 md:grid-cols-3">
+            {previewProjects.map((project, index) => {
+              const Icon = resolveContentIcon(project.icon)
+              return (
+                <a key={project.title} href={`#${getProjectAnchor(project.title)}`} className="work-preview group">
+                  <div className="mb-5 flex items-center justify-between">
+                    <Icon className="h-5 w-5 text-primary" />
+                    <span className="font-mono text-[0.65rem] text-muted-foreground">0{index + 1} / {project.category}</span>
                   </div>
-                </div>
-
-                <div className="grid grid-cols-2 border-t border-white/20">
-                  {focusAreas.map((area, index) => (
-                    <div
-                      key={area}
-                      className={`px-4 py-3 transition-colors duration-200 hover:bg-white/10 ${
-                        index % 2 === 0 ? "border-r border-white/20" : ""
-                      } ${index < focusAreas.length - 2 ? "border-b border-white/20" : ""}`}
-                    >
-                      <span className="font-mono text-[0.62rem] text-white/35">0{index + 1}</span>
-                      <p className="mt-1.5 text-xs font-medium text-white/85">{area}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-            </div>
+                  <div className="flex items-end justify-between gap-4">
+                    <h2 className="max-w-[17rem] text-sm font-medium leading-6">{project.title}</h2>
+                    <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </div>
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>

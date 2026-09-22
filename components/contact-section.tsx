@@ -45,7 +45,7 @@ export function ContactSection() {
       <div className="section-container">
         <div className="mb-12">
           <p className="section-kicker">04 / Reach out</p>
-          <h2 className="section-heading">Contact</h2>
+          <h2 className="section-heading">Good work starts with a conversation.</h2>
           <p className="section-subheading">
             Open to consulting, strategic communications, program leadership, and technical collaboration.
           </p>

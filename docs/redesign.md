@@ -4,7 +4,11 @@
 
 Lead with **Engineering Undergraduate — Applied AI, Software & Technical Leadership**, aligned with the updated CV. Curio Tech leadership, technical outreach and SAP ERP skills support that profile. Preserve team attribution and the distinctions in the [source policy](source-policy.md).
 
-Keep the current UI as the baseline until the owner requests the visual redesign. This preparation changes content organization and accuracy, not the visual design system.
+The owner authorized the visual redesign after the content audit. The implemented design uses warm ivory and forest green in light mode, with a coordinated deep-green dark mode. Geist provides the main type; an italic system serif gives the hero surname a personal accent. No external fonts or new dependencies were added.
+
+The page now follows Hero → Projects → About (including Awards) → Experience → Contact → Footer. Project previews link to individual cards using the shared `getProjectAnchor` utility. Landing copy lives in `content/landing.json`; verified project and profile facts remain in their existing files.
+
+The hero and footer are server-rendered. The header owns the mobile menu and a simple persistent light/dark toggle, replacing the old intensity control. Native anchor links preserve keyboard navigation and browser behavior. Shared colors and landing-specific styles live in `app/globals.css`.
 
 ## Available sections
 
@@ -30,3 +34,7 @@ New layouts can render these records as cards, timelines or dedicated pages with
 - Preserve all source-backed records; never fill empty layout fields with invented awards, dates, links or metrics.
 
 Visual/browser checks are required when the UI is redesigned; static export checks alone do not prove visual or interactive correctness.
+
+## Verification of this redesign
+
+Production build, type checks, content synchronization and static-export checks passed. Headless Chrome checks at 1440, 768, 390 and 320 px found no horizontal page overflow or JavaScript exceptions. Desktop navigation, mobile menu opening/closing, project anchor targets, theme persistence and reduced-motion behavior were checked. Desktop, mobile, dark-mode and lower-section screenshots were visually inspected. Empty required contact fields correctly fail native form validation; no email was sent and no live deployment was performed.

@@ -16,3 +16,8 @@ export function getAssetPath(path: string): string {
   // Always use root-relative paths for both development and production
   return `/${cleanPath}`
 }
+
+/** Stable shared anchors for project previews and full project cards. */
+export function getProjectAnchor(title: string): string {
+  return `project-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
+}

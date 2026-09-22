@@ -6,5 +6,17 @@
     "sha256": "671267a40de3ae341e424837aa703d90338e702bfc7bdbf90d35ae2f7fe9b7ce"
   },
   "awardReport": "https://robotics.ioepc.edu.np/blog/achievements/yantra9/",
-  "existingProjectLinks": "Repository links retained from the existing website; not revalidated against remote repositories during this audit."
+  "existingProjectLinks": "Repository links retained from the existing website; not revalidated against remote repositories during this audit.",
+  "ownerUpdates": [
+    {
+      "claim": "Trained 1,000+ students in technology and robotics.",
+      "source": "Explicit owner statement in the conversation, after the landing-page redesign.",
+      "scope": "Overall training reach; no specific institution, date range or program attribution supplied."
+    },
+    {
+      "claim": "Owner-supplied CV links, iloveqr.app naming, and development credit for Dwaar Tech.",
+      "source": "Explicit owner instructions after the training-reach update.",
+      "scope": "Links placed on relevant organization, project and profile records. Pneumonia GitHub URL replaces the older personal-repository link; the supplied .git clone suffix is omitted for browser navigation. Portfolio www URL is retained as a public link; the existing non-www hosting canonical is unchanged."
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { CalendarDays, MapPin } from "lucide-react"
+import { CalendarDays, MapPin, ExternalLink } from "lucide-react"
 
 import experiences from "@/content/experience.json"
 import education from "@/content/education.json"
@@ -9,8 +9,8 @@ export function ExperienceSection() {
     <section id="experience" className="border-t border-border bg-secondary/45 py-20 lg:py-24">
       <div className="section-container">
         <div className="mb-12">
-          <p className="section-kicker">02 / Trajectory</p>
-          <h2 className="section-heading">Experience & Education</h2>
+          <p className="section-kicker">03 / Along the way</p>
+          <h2 className="section-heading">Learning. Building. Leading.</h2>
           <p className="section-subheading">
             A track record spanning consulting, operations, strategic communications, and technical program delivery.
           </p>
@@ -43,7 +43,14 @@ export function ExperienceSection() {
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                     <div>
                       <h4 className="font-medium text-foreground">{exp.title}</h4>
-                      <p className="text-sm text-primary mt-0.5">{exp.organization}</p>
+                      <p className="text-sm text-primary mt-0.5">
+                        {exp.organizationUrl ? (
+                          <a href={exp.organizationUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-primary/30 underline-offset-4 hover:decoration-primary">
+                            {exp.organization}<ExternalLink aria-hidden="true" className="ml-1 inline h-3 w-3" />
+                            <span className="sr-only"> (opens in a new tab)</span>
+                          </a>
+                        ) : exp.organization}
+                      </p>
                     </div>
                     <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground shrink-0">
                       <span className="flex items-center gap-1">
@@ -65,6 +72,12 @@ export function ExperienceSection() {
                       </li>
                     ))}
                   </ul>
+                  {exp.relatedLink && (
+                    <a href={exp.relatedLink.href} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 text-xs font-medium text-primary underline underline-offset-4">
+                      {exp.relatedLink.label}<ExternalLink aria-hidden="true" className="h-3 w-3" />
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             ))}

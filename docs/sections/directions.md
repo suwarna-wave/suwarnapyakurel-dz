@@ -16,11 +16,11 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 - **Title:** Operations & Partnerships
 - **Description:** Co-founder and COO of Curio Tech, coordinating delivery and institutional collaborations.
 
-## Technical Outreach
+## Technical Training & Outreach
 
 - **Icon:** Users
-- **Title:** Technical Outreach
-- **Description:** Program communications, student learning communities and international STEM events.
+- **Title:** Technical Training & Outreach
+- **Description:** Trained 1,000+ students in technology and robotics, alongside work in student learning communities and international STEM events.
 
 ## Engineering Practice
 

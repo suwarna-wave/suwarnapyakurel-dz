@@ -38,3 +38,7 @@ The header owns appearance preferences and section tracking. Future UI work shou
 - `npm run check`: content check, production build and export validation.
 
 Use pnpm for dependency installation to preserve the existing lockfile; `npm run` only invokes scripts and does not change the lockfile. The legacy `lint` script requires ESLint configuration/dependencies that this repository does not currently contain; it is not a completed validation gate.
+
+## Contextual links
+
+Experience records optionally provide `organizationUrl` or a distinct `relatedLink` for an event. Project records optionally provide `github` for source code, `website` for the live product, `referenceUrl`/`referenceLabel` for supporting context, and a short `credit`. Render only supplied links; never label event pages as product demos. `profile.portfolioUrl` retains the owner’s www URL while `profile.siteUrl` remains the configured hosting canonical.

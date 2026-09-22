@@ -14,8 +14,8 @@ export function AboutSection() {
     <section id="about" className="border-t border-border/70 py-20 lg:py-24">
       <div className="section-container">
         <div className="mb-12">
-          <p className="section-kicker">01 / Profile</p>
-          <h2 className="section-heading">About</h2>
+          <p className="section-kicker">02 / The person behind the work</p>
+          <h2 className="section-heading">Curiosity is the common thread.</h2>
           <p className="section-subheading">
             Applied AI, software and technical leadership, grounded in hands-on engineering.
           </p>

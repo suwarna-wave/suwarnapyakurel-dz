@@ -13,6 +13,7 @@ Read this first before changing content or redesigning the UI. Last content revi
 
 | Section / responsibility | Runtime source | Markdown reference | Rendering |
 | --- | --- | --- | --- |
+| Landing introduction and footer invitation | [landing.json](../content/landing.json) | [Landing](sections/landing.md) | Hero, Footer |
 | Identity, hero, biography, languages, interests | [profile.json](../content/profile.json) | [Profile](sections/profile.md) | Hero, About, Footer; SEO metadata |
 | Skills | [skills.json](../content/skills.json) | [Skills](sections/skills.md) | About |
 | Professional focus | [directions.json](../content/directions.json) | [Directions](sections/directions.md) | About |
@@ -29,7 +30,7 @@ Languages and research interests are retained in the profile data for the redesi
 ## Engineering and redesign
 
 - [Architecture and editing workflow](architecture.md)
-- [UI redesign brief and acceptance checklist](redesign.md)
+- [UI design system and acceptance checklist](redesign.md)
 - [Asset inventory](assets.md)
 - [Audit findings and verification scope](audit-2026-09-23.md)
 - [Deployment guide](deployment.md)

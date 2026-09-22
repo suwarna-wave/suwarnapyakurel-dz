@@ -28,7 +28,7 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 - Image upload, inference, visualization and report export
 - **Icon:** Activity
 - **Featured:** true
-- **Github:** https://github.com/suwarna-wave/Minor-Project-Pneumonia
+- **Github:** https://github.com/yubshan/Minor-Project-2025
 - **Selected:** true
 
 ## Motor Vibration Fault Detector
@@ -77,10 +77,12 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 - Managed deployment, on-site support, monitoring and troubleshooting
 - **Icon:** QrCode
 - **Selected:** true
+- **Reference Url:** https://ioaajr2024.org/
+- **Reference Label:** IOAA-Jr. 2024 event website
 
-## iLoveQR.app — QR Generation & Design Platform
+## iloveqr.app
 
-- **Title:** iLoveQR.app — QR Generation & Design Platform
+- **Title:** iloveqr.app
 - **Description:** Co-developed a deployed QR generation and design web application in a four-member team.
 - **Period:** Deployed product
 - **Category:** Web Application
@@ -96,6 +98,8 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 - Live previews and PNG/SVG/JPEG/PDF export at resolutions up to 2048 px
 - **Icon:** QrCode
 - **Selected:** true
+- **Website:** https://www.iloveqr.app
+- **Credit:** Developed for Dwaar Tech
 
 ## Markdown PDF Studio
 

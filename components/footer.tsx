@@ -1,72 +1,25 @@
-"use client"
-
-import { Button } from "@/components/ui/button"
-import { ArrowUp } from "lucide-react"
-
-import quickLinks from "@/content/navigation.json"
+import { ArrowUp, ArrowUpRight } from "lucide-react"
+import navItems from "@/content/navigation.json"
 import profile from "@/content/profile.json"
-import { resolveContentIcon } from "@/components/content-icons"
-const socialLinks = profile.socialLinks.map((item) => ({ ...item, icon: resolveContentIcon(item.icon) }))
+import landing from "@/content/landing.json"
 
 export function Footer() {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) element.scrollIntoView({ behavior: "smooth" })
-  }
-
   return (
-    <footer className="border-t border-white/10 bg-black text-white">
-      <div className="section-container py-12">
-        <div className="grid md:grid-cols-3 gap-8">
+    <footer className="bg-[#163a2d] text-[#f0f3e8]">
+      <div className="section-container py-12 sm:py-16">
+        <div className="flex flex-col justify-between gap-8 border-b border-white/20 pb-10 sm:flex-row sm:items-end">
           <div>
-            <p className="font-medium text-white">Suwarna Pyakurel</p>
-            <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/50">
-              {profile.footerSummary}
-            </p>
-            <div className="flex items-center gap-2 mt-4">
-              {socialLinks.map((link) => (
-                <Button key={link.name} variant="ghost" size="icon" asChild className="h-8 w-8 text-white/60 hover:bg-white/10 hover:text-white">
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                    <link.icon className="h-4 w-4" />
-                  </a>
-                </Button>
-              ))}
-            </div>
+            <p className="mono-label text-[#c0d0be]">{landing.footerInvitation}</p>
+            <a href={`mailto:${profile.email}`} className="mt-4 flex items-center gap-4 text-3xl font-medium tracking-tight sm:text-4xl">{landing.footerHeading}<ArrowUpRight className="h-7 w-7 shrink-0" /></a>
           </div>
-
-          <div>
-            <p className="text-sm font-medium mb-3">Navigation</p>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-sm text-white/50 transition-colors hover:text-white"
-                  >
-                    {link.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-sm font-medium mb-3">Contact</p>
-            <div className="space-y-1 text-sm text-white/50">
-              <p>{profile.location}</p>
-              <p>{profile.email}</p>
-              <p>{profile.phone}</p>
-            </div>
-          </div>
+          <a href="#hero" className="flex items-center gap-2 text-xs text-[#c0d0be] hover:text-white">Back to top <ArrowUp className="h-4 w-4" /></a>
         </div>
-
-        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 sm:flex-row">
-          <p className="text-xs text-white/40">© {new Date().getFullYear()} Suwarna Pyakurel</p>
-          <Button variant="ghost" size="sm" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-xs text-white/60 hover:bg-white/10 hover:text-white">
-            <ArrowUp className="h-3.5 w-3.5 mr-1.5" />
-            Back to top
-          </Button>
+        <div className="grid gap-8 py-8 sm:grid-cols-3">
+          <div><a href={profile.portfolioUrl} className="text-sm font-semibold underline decoration-white/30 underline-offset-4 hover:decoration-white">{profile.name}</a><p className="mt-3 max-w-xs text-xs leading-6 text-[#c0d0be]">{profile.footerSummary}</p></div>
+          <nav aria-label="Footer navigation" className="flex flex-wrap content-start gap-x-5 gap-y-3 sm:justify-center">{navItems.map((item) => <a key={item.href} href={item.href} className="text-xs text-[#c0d0be] hover:text-white">{item.name}</a>)}</nav>
+          <div className="flex flex-wrap content-start gap-5 sm:justify-end">{profile.socialLinks.map((item) => <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-[#c0d0be] hover:text-white">{item.name}<ArrowUpRight className="h-3 w-3" /></a>)}</div>
         </div>
+        <div className="flex flex-wrap justify-between gap-4 border-t border-white/20 pt-6 text-[0.65rem] text-[#c0d0be]"><span>© {new Date().getFullYear()} {profile.name}</span><span>{profile.location}</span></div>
       </div>
     </footer>
   )
