@@ -3,10 +3,8 @@ import { Badge } from "@/components/ui/badge"
 
 import profile from "@/content/profile.json"
 import skillGroups from "@/content/skills.json"
-import directionData from "@/content/directions.json"
 import awardData from "@/content/awards.json"
 import { resolveContentIcon } from "@/components/content-icons"
-const directions = directionData.map((item) => ({ ...item, icon: resolveContentIcon(item.icon) }))
 const achievements = awardData.map((item) => ({ ...item, icon: resolveContentIcon(item.icon) }))
 
 export function AboutSection() {
@@ -27,24 +25,6 @@ export function AboutSection() {
               {profile.about.map((paragraph, index) => (
                 <p key={paragraph} className={index === 0 ? "text-foreground/90" : undefined}>{paragraph}</p>
               ))}
-            </div>
-
-            <div>
-              <h3 className="mb-4 text-sm font-medium text-foreground">Professional focus</h3>
-              <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
-                {directions.map((direction) => (
-                  <div
-                    key={direction.title}
-                    className="group bg-card p-4 transition-all duration-300 hover:bg-accent/55"
-                  >
-                    <div className="mb-3 grid h-8 w-8 place-items-center rounded-lg bg-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:bg-background">
-                      <direction.icon className="h-4 w-4 text-foreground" />
-                    </div>
-                    <h4 className="text-sm font-medium text-foreground">{direction.title}</h4>
-                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{direction.description}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
@@ -115,7 +95,7 @@ export function AboutSection() {
                           rel="noopener noreferrer"
                           className="mt-3 inline-block rounded-sm text-xs font-medium text-primary underline underline-offset-4 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                         >
-                          Yantra 9.0 — Robotics Club report
+                          {item.sourceLabel ?? "Yantra 9.0 — Robotics Club report"}
                         </a>
                       )}
                     </div>

@@ -14,7 +14,7 @@ export function Header() {
   const header = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    let preferred = window.matchMedia("(prefers-color-scheme: dark)").matches
+    let preferred = false
     try {
       const saved = localStorage.getItem("portfolio-theme")
       if (saved) preferred = saved === "dark"
@@ -58,7 +58,7 @@ export function Header() {
   }
 
   return (
-    <header ref={header} className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur-xl">
+    <header ref={header} className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-xl">
       <a href="#main" className="skip-link">Skip to content</a>
       <div className="section-container flex h-20 items-center justify-between gap-4">
         <a href="#hero" aria-label={`${profile.name} — home`} className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>

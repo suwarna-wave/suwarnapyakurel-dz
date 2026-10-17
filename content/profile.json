@@ -7,7 +7,7 @@
   "summary": "Electronics, Communication and Information Engineering undergraduate with projects in explainable deep learning, signal processing, IoT and software systems. Co-founder of Curio Tech, combining hands-on engineering with operations, institutional partnerships and technical outreach.",
   "about": [
     "I am an Electronics, Communication and Information Engineering undergraduate at Tribhuvan University, IOE Purwanchal Campus, with projects in explainable deep learning, signal processing, IoT and software systems.",
-    "As Co-founder and COO of Curio Tech, I combine hands-on engineering with operations, institutional partnerships and technical outreach. My community roles support student learning, research engagement and international STEM programs.",
+    "As Co-founder and COO of Curio Tech, I combine hands-on engineering with operations, institutional partnerships and technical outreach. I served as Country Guide and Tech Lead for IOAA-Jr. 2024, and my community roles support student learning, research engagement and international STEM programs.",
     "My work spans chest X-ray research, vibration-based fault detection, smart agriculture and event technology. I independently designed and deployed QR tracking for IOAA-Jr. 2024, supporting 200+ participants, delegates, organizers and personnel, including delegates from 19 countries."
   ],
   "footerSummary": "Engineering undergraduate and Curio Tech co-founder working across applied AI, software and technical leadership.",
@@ -17,8 +17,17 @@
   "telephone": "+9779840036060",
   "siteUrl": "https://suwarnapyakurel.com.np",
   "siteTitle": "Suwarna Pyakurel — Applied AI, Software & Technical Leadership",
-  "portrait": "/suwarna-pyakurel.png",
-  "portraitAlt": "Suwarna Pyakurel at ICRTAI",
+  "portrait": "/suwarna-portrait.jpg",
+  "portraitAlt": "Portrait of Suwarna Pyakurel at ICRTAI",
+  "ambassador": {
+    "label": "Student Ambassador, ANAIS 2026",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7515962368430899201/"
+  },
+  "anais": {
+    "url": "https://anais.naamii.org.np/",
+    "linkedin": "https://www.linkedin.com/in/suwarnapyakurel/",
+    "poster": "/anais-selected.jpg"
+  },
   "resumePath": "/Suwarna_Pyakurel_CV.pdf",
   "socialLinks": [
     {

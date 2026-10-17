@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: profile.portrait,
-        width: 747,
-        height: 1024,
+        width: 444,
+        height: 440,
         alt: "Suwarna Pyakurel",
       },
     ],
@@ -71,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         {children}
         <Analytics />
