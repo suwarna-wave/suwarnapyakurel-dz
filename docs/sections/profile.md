@@ -14,7 +14,7 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 ## About
 
 - I am an Electronics, Communication and Information Engineering undergraduate at Tribhuvan University, IOE Purwanchal Campus, with projects in explainable deep learning, signal processing, IoT and software systems.
-- As Co-founder and COO of Curio Tech, I combine hands-on engineering with operations, institutional partnerships and technical outreach. My community roles support student learning, research engagement and international STEM programs.
+- As Co-founder and COO of Curio Tech, I combine hands-on engineering with operations, institutional partnerships and technical outreach. I served as Country Guide and Tech Lead for IOAA-Jr. 2024, and my community roles support student learning, research engagement and international STEM programs.
 - My work spans chest X-ray research, vibration-based fault detection, smart agriculture and event technology. I independently designed and deployed QR tracking for IOAA-Jr. 2024, supporting 200+ participants, delegates, organizers and personnel, including delegates from 19 countries.
 - **Footer Summary:** Engineering undergraduate and Curio Tech co-founder working across applied AI, software and technical leadership.
 - **Location:** Biratnagar, Koshi Province, Nepal
@@ -23,8 +23,19 @@ Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate
 - **Telephone:** +9779840036060
 - **Site Url:** https://suwarnapyakurel.com.np
 - **Site Title:** Suwarna Pyakurel — Applied AI, Software & Technical Leadership
-- **Portrait:** /suwarna-pyakurel.png
-- **Portrait Alt:** Suwarna Pyakurel at ICRTAI
+- **Portrait:** /suwarna-portrait.jpg
+- **Portrait Alt:** Portrait of Suwarna Pyakurel at ICRTAI
+
+## Ambassador
+
+- **Label:** Student Ambassador, ANAIS 2026
+- **Href:** https://www.linkedin.com/feed/update/urn:li:activity:7515962368430899201/
+
+## Anais
+
+- **Url:** https://anais.naamii.org.np/
+- **Linkedin:** https://www.linkedin.com/in/suwarnapyakurel/
+- **Poster:** /anais-selected.jpg
 - **Resume Path:** /Suwarna_Pyakurel_CV.pdf
 
 ## Social Links

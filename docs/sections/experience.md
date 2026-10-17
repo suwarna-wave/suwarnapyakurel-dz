@@ -4,6 +4,24 @@
 
 Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate; do not edit this snapshot independently. Factual basis and unresolved details: [source policy](../source-policy.md).
 
+## Student Ambassador
+
+- **Title:** Student Ambassador
+- **Organization:** ANAIS 2026
+- **Location:** Nepal
+- **Period:** 2026 — Present
+- **Description:** Selected as a Student Ambassador for ANAIS 2026, representing the initiative among students and technical communities.
+
+### Highlights
+
+- Selected as Student Ambassador for ANAIS 2026
+- Community outreach and student engagement
+
+### Related Link
+
+- **Label:** View the announcement on LinkedIn
+- **Href:** https://www.linkedin.com/feed/update/urn:li:activity:7515962368430899201/
+
 ## Co-founder & COO
 
 - **Title:** Co-founder & COO

@@ -4,6 +4,15 @@
 
 Generated from runtime data by `npm run docs:sync`. Edit the JSON and regenerate; do not edit this snapshot independently. Factual basis and unresolved details: [source policy](../source-policy.md).
 
+## Student Ambassador — ANAIS 2026
+
+- **Icon:** Users
+- **Title:** Student Ambassador — ANAIS 2026
+- **Description:** Selected as a Student Ambassador for ANAIS 2026.
+- **Year:** 2026
+- **Source Url:** https://www.linkedin.com/feed/update/urn:li:activity:7515962368430899201/
+- **Source Label:** View announcement on LinkedIn
+
 ## Yantra 9.0 — Business Cup Expo Winner
 
 - **Icon:** Award
